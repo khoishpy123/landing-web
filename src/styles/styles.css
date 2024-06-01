@@ -29,7 +29,7 @@ body {
 .header__content-body {
   margin-top: 80px;
   height: 900px;
-  background-image: url(../../imgs/Banner.jpg);
+  background-image: url(../../imgs/Banner.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
