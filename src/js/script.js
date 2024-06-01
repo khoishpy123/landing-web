@@ -45,40 +45,60 @@ function startCountdown(days, hours, minutes) {
 // Start the countdown with initial values: 30 days, 720 hours, 430 minutes
 startCountdown(30, 720, 430);
 //
-document
-  .getElementById("languageSelect")
-  .addEventListener("change", function () {
-    var language = this.value;
-    // Implement language switching logic here
-    if (language === "vi") {
-      document.getElementById("about").querySelector("h2").textContent =
-        "Về Chúng Tôi";
-      document.getElementById("about").querySelector("p").textContent =
-        "Thêm thông tin về công ty của bạn ở đây.";
-      document.getElementById("services").querySelector("h2").textContent =
-        "Dịch Vụ Của Chúng Tôi";
-      document.getElementById("services").querySelector("p").textContent =
-        "Thêm thông tin về dịch vụ của bạn ở đây.";
-      document.getElementById("contact").querySelector("h2").textContent =
-        "Liên Hệ";
-      document.getElementById("contact").querySelector("p").textContent =
-        "Thêm thông tin liên hệ của bạn ở đây.";
-      document.getElementById("countdown").querySelector("h2").textContent =
-        "Đồng Hồ Đếm Ngược";
+document.addEventListener("DOMContentLoaded", function () {
+  emailjs.init("fqCu0rU0f8PdraPgd");
+
+  const popup = document.getElementById("popup");
+  const btn = document.querySelector(".header__button");
+  const span = document.getElementsByClassName("close")[0];
+  const confirmButton = document.getElementById("confirmButton");
+  btn.onclick = function () {
+    popup.style.display = "block";
+  };
+
+  span.onclick = function () {
+    popup.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target === popup) {
+      popup.style.display = "none";
+    }
+  };
+  confirmButton.addEventListener("click", function () {
+    const name = document.getElementById("name").value;
+    if (name) {
+      const templateParams = {
+        to_email: "nguyenbathanh20122000@gmail.com",
+        from_name: "Website Form",
+        message: `Họ Tên Khách Hàng: ${name}`,
+      };
+
+      emailjs.send("service_oeyzchk", "template_z4k5i58", templateParams).then(
+        function (response) {
+          Swal.fire({
+            icon: "success",
+            title: "Thank you see you soon",
+            text: "No one likes big deltas between forecasts and actuals. Most models though are too limited, relying on sample datasets or just gut feel. Oracle Cloud ERP introduces machine-learning to",
+          });
+          customerForm.reset();
+          formContainer.classList.add("hidden");
+        },
+        function (error) {
+          Swal.fire({
+            icon: "error",
+            title: "Lỗi",
+            text: "Gửi email thất bại...",
+          });
+        }
+      );
     } else {
-      document.getElementById("about").querySelector("h2").textContent =
-        "About Us";
-      document.getElementById("about").querySelector("p").textContent =
-        "Insert your company information here.";
-      document.getElementById("services").querySelector("h2").textContent =
-        "Our Services";
-      document.getElementById("services").querySelector("p").textContent =
-        "Insert your services information here.";
-      document.getElementById("contact").querySelector("h2").textContent =
-        "Contact Us";
-      document.getElementById("contact").querySelector("p").textContent =
-        "Insert your contact information here.";
-      document.getElementById("countdown").querySelector("h2").textContent =
-        "Countdown Timer";
+      Swal.fire({
+        icon: "warning",
+        title: "Cảnh báo",
+        text: "Vui lòng điền họ tên.",
+      });
     }
   });
+  customerForm.reset();
+});
