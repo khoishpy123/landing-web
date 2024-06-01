@@ -71,7 +71,9 @@ body {
   background-color: #7e410b;
   border: 3px solid #7e410b;
 }
-
+.form_icon {
+  padding-top: 5px;
+}
 #about {
   display: inline-block;
   width: 100%;
@@ -105,6 +107,7 @@ body {
 }
 h2 {
   font-size: 42px;
+  margin-bottom: 0;
 }
 p {
   font-size: 18px;
