@@ -102,3 +102,34 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   customerForm.reset();
 });
+
+
+// Slider
+const dot = document.querySelectorAll(".dot");
+const imageContainer = document.querySelectorAll(".image__container");
+const slideOne = document.querySelector(".wrab_about--one");
+const slideTwo = document.querySelector(".wrab_about--two");
+const slideThree = document.querySelector(".wrab_about--three");
+
+const changeSlide = (event, index) => {
+  dot.forEach(element => {
+    element.classList.remove('dot--active');
+  });
+  event.target.classList.add("dot--active")
+
+  imageContainer.forEach(element => {
+    element.classList.remove('image__container--display');
+  });
+  switch(index){
+    case 1:
+      slideOne.classList.add('image__container--display');
+      break;
+    case 2:
+      slideTwo.classList.add('image__container--display');
+      break;
+    case 3:
+      slideThree.classList.add('image__container--display');
+      break;
+
+  }
+}
