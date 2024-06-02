@@ -43,7 +43,7 @@ function startCountdown(days, hours, minutes) {
 }
 
 // Start the countdown with initial values: 30 days, 720 hours, 430 minutes
-startCountdown(30, 720, 430);
+startCountdown(19, 450, 27000);
 //
 document.addEventListener("DOMContentLoaded", function () {
   emailjs.init("fqCu0rU0f8PdraPgd");
@@ -103,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
   customerForm.reset();
 });
 
-
 // Slider
 const dot = document.querySelectorAll(".dot");
 const imageContainer = document.querySelectorAll(".image__container");
@@ -117,38 +116,37 @@ let countIndex = 1;
 let countDot = dotOne;
 
 const changeSlide = (event, index) => {
-  dot.forEach(element => {
-    element.classList.remove('dot--active');
+  dot.forEach((element) => {
+    element.classList.remove("dot--active");
   });
-  event.target.classList.add("dot--active")
+  event.target.classList.add("dot--active");
 
-  imageContainer.forEach(element => {
-    element.classList.remove('image__container--display');
+  imageContainer.forEach((element) => {
+    element.classList.remove("image__container--display");
   });
   switch (index) {
     case 1:
-      slideOne.classList.add('image__container--display');
+      slideOne.classList.add("image__container--display");
       countIndex = 2;
       countDot = dotTwo;
       break;
     case 2:
-      slideTwo.classList.add('image__container--display');
+      slideTwo.classList.add("image__container--display");
       countIndex = 3;
       countDot = dotThree;
       break;
     case 3:
-      slideThree.classList.add('image__container--display');
+      slideThree.classList.add("image__container--display");
       countIndex = 1;
       countDot = dotOne;
       break;
-
   }
-}
+};
 
 const slideLoop = () => {
   setInterval(() => {
-    changeSlide({ target: countDot }, countIndex)
-  }, 3000)
-}
+    changeSlide({ target: countDot }, countIndex);
+  }, 3000);
+};
 
-slideLoop()
+slideLoop();
