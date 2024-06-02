@@ -110,6 +110,11 @@ const imageContainer = document.querySelectorAll(".image__container");
 const slideOne = document.querySelector(".wrab_about--one");
 const slideTwo = document.querySelector(".wrab_about--two");
 const slideThree = document.querySelector(".wrab_about--three");
+const dotOne = document.querySelector(".dot-one");
+const dotTwo = document.querySelector(".dot-two");
+const dotThree = document.querySelector(".dot-three");
+let countIndex = 1;
+let countDot = dotOne;
 
 const changeSlide = (event, index) => {
   dot.forEach(element => {
@@ -120,16 +125,30 @@ const changeSlide = (event, index) => {
   imageContainer.forEach(element => {
     element.classList.remove('image__container--display');
   });
-  switch(index){
+  switch (index) {
     case 1:
       slideOne.classList.add('image__container--display');
+      countIndex = 2;
+      countDot = dotTwo;
       break;
     case 2:
       slideTwo.classList.add('image__container--display');
+      countIndex = 3;
+      countDot = dotThree;
       break;
     case 3:
       slideThree.classList.add('image__container--display');
+      countIndex = 1;
+      countDot = dotOne;
       break;
 
   }
 }
+
+const slideLoop = () => {
+  setInterval(() => {
+    changeSlide({ target: countDot }, countIndex)
+  }, 3000)
+}
+
+slideLoop()

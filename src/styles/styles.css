@@ -154,6 +154,8 @@ p {
 
 .image__container--display{
   display: block;
+  animation-name: opacityDisplay;
+  animation-duration: 1s;
 }
 
 .about__content-list {
@@ -330,6 +332,9 @@ li {
   padding-left: 70px;
 }
 
+.slide-container{
+}
+
 .dot__container {
   margin-top: 30px;
   display: flex;
@@ -347,6 +352,11 @@ li {
 
 .dot--active{
    background-color: #f4811f;
+}
+
+@keyframes opacityDisplay {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 @media only screen and (max-width: 769px) {
@@ -426,6 +436,3 @@ li {
     flex-direction: column;
   } */
 }
-
-
-@import "responsive.css";
