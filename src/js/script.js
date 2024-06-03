@@ -65,11 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
       popup.style.display = "none";
     }
   };
+  //mail
   confirmButton.addEventListener("click", function () {
     const name = document.getElementById("name").value;
     if (name) {
       const templateParams = {
-        to_email: "nguyenbathanh20122000@gmail.com",
+        to_email: "ARON@gmail.com",
         from_name: "Website Form",
         message: `Họ Tên Khách Hàng: ${name}`,
       };
