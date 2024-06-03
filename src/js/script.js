@@ -77,11 +77,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       emailjs.send("service_oeyzchk", "template_z4k5i58", templateParams).then(
         function (response) {
-          Swal.fire({
-            icon: "success",
-            title: "Thank you see you soon",
-            text: "No one likes big deltas between forecasts and actuals. Most models though are too limited, relying on sample datasets or just gut feel. Oracle Cloud ERP introduces machine-learning to",
-          });
+          // Swal.fire({
+          //   icon: "success",
+          //   title: "Thank you see you soon",
+          //   text: "No one likes big deltas between forecasts and actuals. Most models though are too limited, relying on sample datasets or just gut feel. Oracle Cloud ERP introduces machine-learning to",
+          // });
+          popupSuccessEl.classList.remove("hidden-popup")
           customerForm.reset();
           formContainer.classList.add("hidden");
         },
@@ -151,3 +152,13 @@ const slideLoop = () => {
 };
 
 slideLoop();
+
+
+const popupSuccessEl = document.querySelector(".popup__container");
+
+let isPopupSuccess = false
+
+const closePopupSuccess = () => {
+  popupSuccessEl.classList.add("hidden-popup")
+  isPopupSuccess = false
+}
