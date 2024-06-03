@@ -43,7 +43,7 @@ function startCountdown(days, hours, minutes) {
 }
 
 // Start the countdown with initial values: 30 days, 720 hours, 430 minutes
-startCountdown(19, 450, 27000);
+startCountdown(18, 438, 26280);
 //
 document.addEventListener("DOMContentLoaded", function () {
   emailjs.init("fqCu0rU0f8PdraPgd");
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
           //   title: "Thank you see you soon",
           //   text: "No one likes big deltas between forecasts and actuals. Most models though are too limited, relying on sample datasets or just gut feel. Oracle Cloud ERP introduces machine-learning to",
           // });
-          popupSuccessEl.classList.remove("hidden-popup")
+          popupSuccessEl.classList.remove("hidden-popup");
           customerForm.reset();
           formContainer.classList.add("hidden");
         },
@@ -153,12 +153,11 @@ const slideLoop = () => {
 
 slideLoop();
 
-
 const popupSuccessEl = document.querySelector(".popup__container");
 
-let isPopupSuccess = false
+let isPopupSuccess = false;
 
 const closePopupSuccess = () => {
-  popupSuccessEl.classList.add("hidden-popup")
-  isPopupSuccess = false
-}
+  popupSuccessEl.classList.add("hidden-popup");
+  isPopupSuccess = false;
+};
