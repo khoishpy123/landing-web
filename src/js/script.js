@@ -43,7 +43,7 @@ function startCountdown(days, hours, minutes) {
 }
 
 // Start the countdown with initial values: 30 days, 720 hours, 430 minutes
-startCountdown(18, 438, 26280);
+startCountdown(18, 436, 26220);
 //
 document.addEventListener("DOMContentLoaded", function () {
   emailjs.init("fqCu0rU0f8PdraPgd");
