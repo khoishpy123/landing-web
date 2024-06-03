@@ -151,7 +151,7 @@ const slideLoop = () => {
   }, 3000);
 };
 
-slideLoop();
+// slideLoop();
 
 const popupSuccessEl = document.querySelector(".popup__container");
 
