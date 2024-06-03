@@ -1,30 +1,39 @@
 //
 // Function to start countdown
-function startCountdown(days, hours, minutes) {
+function startCountdown(days, hours, minutes, Seconds) {
   // Set initial values
   let remainingDays = days;
   let remainingHours = hours;
   let remainingMinutes = minutes;
+  let remainingSeconds = Seconds;
 
   // Get references to countdown elements
   const daysElement = document.getElementById("days");
   const hoursElement = document.getElementById("hours");
   const minutesElement = document.getElementById("minutes");
+  const secondsElement = document.getElementById("seconds");
 
   // Update the countdown display
   function updateCountdown() {
     // Reduce the time
-    if (remainingMinutes > 0) {
-      remainingMinutes--;
+    if (remainingSeconds > 0) {
+      remainingSeconds--;
     } else {
-      if (remainingHours > 0) {
-        remainingHours--;
-        remainingMinutes = 59;
+      if (remainingMinutes > 0) {
+        remainingMinutes--;
+        remainingSeconds = 59;
       } else {
-        if (remainingDays > 0) {
-          remainingDays--;
-          remainingHours = 23;
+        if (remainingHours > 0) {
+          remainingHours--;
           remainingMinutes = 59;
+          remainingSeconds = 59;
+        } else {
+          if (remainingDays > 0) {
+            remainingDays--;
+            remainingHours = 23;
+            remainingMinutes = 59;
+            remainingSeconds = 59;
+          }
         }
       }
     }
@@ -33,17 +42,18 @@ function startCountdown(days, hours, minutes) {
     daysElement.innerHTML = `${remainingDays} <span>ngày</span>`;
     hoursElement.innerHTML = `${remainingHours} <span>giờ</span>`;
     minutesElement.innerHTML = `${remainingMinutes} <span>phút</span>`;
+    secondsElement.innerHTML = `${remainingSeconds} <span>giây</span>`;
   }
 
   // Call updateCountdown every minute
-  setInterval(updateCountdown, 60000);
+  setInterval(updateCountdown, 1000);
 
   // Initial call to set the countdown immediately
   updateCountdown();
 }
 
 // Start the countdown with initial values: 30 days, 720 hours, 430 minutes
-startCountdown(18, 436, 26220);
+startCountdown(18, 2, 27, 20);
 //
 document.addEventListener("DOMContentLoaded", function () {
   emailjs.init("fqCu0rU0f8PdraPgd");

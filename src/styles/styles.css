@@ -74,7 +74,8 @@ body {
 
 #days,
 #hours,
-#minutes {
+#minutes,
+#seconds {
   display: grid;
   margin: 0px 30px;
   text-align: center;
@@ -443,7 +444,8 @@ label {
 
   #days,
   #hours,
-  #minutes {
+  #minutes,
+  #seconds {
     display: flex;
     margin: 0px 30px;
     gap: 20px;
