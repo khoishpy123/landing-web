@@ -1,59 +1,59 @@
 //
 // Function to start countdown
-function startCountdown(days, hours, minutes, Seconds) {
-  // Set initial values
-  let remainingDays = days;
-  let remainingHours = hours;
-  let remainingMinutes = minutes;
-  let remainingSeconds = Seconds;
+// function startCountdown(days, hours, minutes, Seconds) {
+//   // Set initial values
+//   let remainingDays = days;
+//   let remainingHours = hours;
+//   let remainingMinutes = minutes;
+//   let remainingSeconds = Seconds;
 
-  // Get references to countdown elements
-  const daysElement = document.getElementById("days");
-  const hoursElement = document.getElementById("hours");
-  const minutesElement = document.getElementById("minutes");
-  const secondsElement = document.getElementById("seconds");
+//   // Get references to countdown elements
+//   const daysElement = document.getElementById("days");
+//   const hoursElement = document.getElementById("hours");
+//   const minutesElement = document.getElementById("minutes");
+//   const secondsElement = document.getElementById("seconds");
 
-  // Update the countdown display
-  function updateCountdown() {
-    // Reduce the time
-    if (remainingSeconds > 0) {
-      remainingSeconds--;
-    } else {
-      if (remainingMinutes > 0) {
-        remainingMinutes--;
-        remainingSeconds = 59;
-      } else {
-        if (remainingHours > 0) {
-          remainingHours--;
-          remainingMinutes = 59;
-          remainingSeconds = 59;
-        } else {
-          if (remainingDays > 0) {
-            remainingDays--;
-            remainingHours = 23;
-            remainingMinutes = 59;
-            remainingSeconds = 59;
-          }
-        }
-      }
-    }
+//   // Update the countdown display
+//   function updateCountdown() {
+//     // Reduce the time
+//     if (remainingSeconds > 0) {
+//       remainingSeconds--;
+//     } else {
+//       if (remainingMinutes > 0) {
+//         remainingMinutes--;
+//         remainingSeconds = 59;
+//       } else {
+//         if (remainingHours > 0) {
+//           remainingHours--;
+//           remainingMinutes = 59;
+//           remainingSeconds = 59;
+//         } else {
+//           if (remainingDays > 0) {
+//             remainingDays--;
+//             remainingHours = 23;
+//             remainingMinutes = 59;
+//             remainingSeconds = 59;
+//           }
+//         }
+//       }
+//     }
 
-    // Update the DOM elements
-    daysElement.innerHTML = `${remainingDays} <span>ngày</span>`;
-    hoursElement.innerHTML = `${remainingHours} <span>giờ</span>`;
-    minutesElement.innerHTML = `${remainingMinutes} <span>phút</span>`;
-    secondsElement.innerHTML = `${remainingSeconds} <span>giây</span>`;
-  }
+//     // Update the DOM elements
+//     daysElement.innerHTML = `${remainingDays} <span>ngày</span>`;
+//     hoursElement.innerHTML = `${remainingHours} <span>giờ</span>`;
+//     minutesElement.innerHTML = `${remainingMinutes} <span>phút</span>`;
+//     secondsElement.innerHTML = `${remainingSeconds} <span>giây</span>`;
+//   }
 
-  // Call updateCountdown every minute
-  setInterval(updateCountdown, 1000);
+//   // Call updateCountdown every minute
+//   setInterval(updateCountdown, 1000);
 
-  // Initial call to set the countdown immediately
-  updateCountdown();
-}
+//   // Initial call to set the countdown immediately
+//   updateCountdown();
+// }
 
-// Start the countdown with initial values: 30 days, 720 hours, 430 minutes
-startCountdown(18, 2, 27, 20);
+// // Start the countdown with initial values: 30 days, 720 hours, 430 minutes
+// startCountdown(18, 2, 27, 20);
 //
 document.addEventListener("DOMContentLoaded", function () {
   emailjs.init("fqCu0rU0f8PdraPgd");
@@ -171,3 +171,35 @@ const closePopupSuccess = () => {
   popupSuccessEl.classList.add("hidden-popup");
   isPopupSuccess = false;
 };
+//countdown timer events
+// Set the date we're counting down to
+var countDownDate = new Date("Jun 21, 2024 18:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function () {
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  // document.getElementById("header__countdown").innerHTML =
+  //   days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  document.getElementById("days").innerHTML = `${days} <span>ngày</span>`;
+  document.getElementById("hours").innerHTML = `${hours} <span>giời</span>`;
+  document.getElementById("minutes").innerHTML = `${minutes} <span>phút</span>`;
+  document.getElementById("seconds").innerHTML = `${seconds} <span>giây</span>`;
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("header__countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);

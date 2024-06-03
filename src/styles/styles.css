@@ -63,7 +63,7 @@ body {
   font-weight: 400;
 }
 
-.header__countdown {
+#header__countdown {
   display: flex;
   padding-bottom: 50px;
   font-size: 60px;
@@ -463,7 +463,7 @@ label {
     font-size: 3rem;
   }
 
-  .header__countdown {
+  #header__countdown {
     flex-direction: column;
     width: 100%;
     gap: 30px;
