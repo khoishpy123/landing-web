@@ -1,144 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Landing Page</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Company Landing Page</title>
-  <link rel="stylesheet" href="./styles/styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</head>
-
-<body>
-  <header class="container__header">
-    <div class="header__content">
-      <a href="#" class="header__container-logo">
-        <img src="../imgs/Logo.svg" alt="Company Logo" />
-        <span class="header__title">15th Annlversary</span>
-      </a>
-    </div>
-    <div class="header__content-body">
-      <div class="banner__content">
-        <div class="name_header">
-          <h2 class="banner__content--title">ARON hành trình 15 năm</h2>
-          <h3 class="banner__content--des" style="font-size: 36px">
-            Nhận & Cảm
-          </h3>
-        </div>
-        <div class="header__countdown">
-          <div id="days">30 <span>ngày</span></div>
-          <div id="hours">720 <span>giờ</span></div>
-          <div id="minutes">0 <span>phút</span></div>
-        </div>
-        <div class="banner__content--btn">
-          <button class="header__button">
-            <span class="header__button-text">Xác Nhận tham dự</span>
-            <span class="header__button-text-responsive">Tham dự</span>
-            <div>
-              <img class="form_icon" src="../imgs/arrow.png" alt="Arrow" />
-            </div>
-          </button>
+  <body>
+    <header class="container__header">
+      <div class="header__content">
+        <a href="#" class="header__container-logo">
+          <img src="../imgs/Logo.svg" alt="Company Logo" />
+          <span class="header__title">15th Annlversary</span>
+        </a>
+      </div>
+      <div class="header__content-body">
+        <div class="banner__content">
+          <div class="name_header">
+            <h2 class="banner__content--title">ARON hành trình 15 năm</h2>
+            <h3 class="banner__content--des" style="font-size: 36px">
+              Nhận & Cảm
+            </h3>
+          </div>
+          <div class="header__countdown">
+            <div id="days">30 <span>ngày</span></div>
+            <div id="hours">720 <span>giờ</span></div>
+            <div id="minutes">0 <span>phút</span></div>
+          </div>
+          <div class="banner__content--btn">
+            <button class="header__button">
+              <span class="header__button-text">Xác Nhận tham dự</span>
+              <span class="header__button-text-responsive">Tham dự</span>
+              <div>
+                <img class="form_icon" src="../imgs/arrow.png" alt="Arrow" />
+              </div>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section id="about">
-      <div class="about__content-header">
-        <h2>Thư Viện Hình Ảnh</h2>
-        <p>Cùng nhìn lại cặng đường 15 năm ...</p>
-      </div>
-      <div class="slide-container">
-        <!-- slide one -->
-        <div class="wrab_about--one image__container image__container--display">
-          <ul class="about__content-list">
-            <li class="image_item1">
-              <img class="image__company" src="../imgs/item1.png" alt="image_company" />
-              <img class="image__company-two" src="../imgs/item2.png" alt="image_company" />
+    <main>
+      <section id="about">
+        <div class="about__content-header">
+          <h2>Thư Viện Hình Ảnh</h2>
+          <p>Cùng nhìn lại cặng đường 15 năm ...</p>
+        </div>
+        <div class="slide-container">
+          <!-- slide one -->
+          <div
+            class="wrab_about--one image__container image__container--display"
+          >
+            <ul class="about__content-list">
+              <li class="image_item1">
+                <img
+                  class="image__company"
+                  src="../imgs/item1.png"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company-two"
+                  src="../imgs/item2.png"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item2">
+                <img
+                  class="image__company-three"
+                  src="../imgs/item3.png"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item3">
+                <img
+                  class="image__company image__company-last"
+                  src="../imgs/item4.png"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company image__company-last2"
+                  src="../imgs/item5.png"
+                  alt="image_company"
+                />
+              </li>
+            </ul>
+          </div>
+
+          <!-- slide two -->
+          <div class="wrab_about--two image__container">
+            <ul class="about__content-list">
+              <li class="image_item1">
+                <img
+                  class="image__company"
+                  src="../imgs/item1.png"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company-two"
+                  src="../imgs/item2.png"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item2">
+                <img
+                  class="image__company-three"
+                  src="../imgs/item3.png"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item3">
+                <img
+                  class="image__company image__company-last"
+                  src="../imgs/item4.png"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company image__company-last2"
+                  src="../imgs/item5.png"
+                  alt="image_company"
+                />
+              </li>
+            </ul>
+          </div>
+          <!-- slide three -->
+          <div class="wrab_about--three image__container">
+            <ul class="about__content-list">
+              <li class="image_item1">
+                <img
+                  class="image__company"
+                  src="../imgs/item1.png"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company-two"
+                  src="../imgs/item2.png"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item2">
+                <img
+                  class="image__company-three"
+                  src="../imgs/item3.png"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item3">
+                <img
+                  class="image__company image__company-last"
+                  src="../imgs/item4.png"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company image__company-last2"
+                  src="../imgs/item5.png"
+                  alt="image_company"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="dot__container">
+          <div
+            class="dot-one dot dot--active"
+            onclick="changeSlide(event, 1)"
+          ></div>
+          <div class="dot-two dot" onclick="changeSlide(event, 2)"></div>
+          <div class="dot-three dot" onclick="changeSlide(event, 3)"></div>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Khách Hàng</h2>
+        <p class="customer__description">
+          An anniversary is the date on which an event took place or an
+          institution was founded in a previous year, and may also refer to the
+          commemoration or
+        </p>
+        <div class="contact__container-content">
+          <ul class="customer_content">
+            <li class="image_customer1">
+              <img class="customer_image" src="../imgs/BGRIM.png" />
             </li>
-            <li class="image_item2">
-              <img class="image__company-three" src="../imgs/item3.png" alt="image_company" />
+            <li class="image_customer2">
+              <img class="customer_image" src="../imgs/TTC.png" />
             </li>
-            <li class="image_item3">
-              <img class="image__company image__company-last" src="../imgs/item4.png" alt="image_company" />
-              <img class="image__company image__company-last2" src="../imgs/item5.png" alt="image_company" />
+            <li class="image_customer3">
+              <img class="customer_image" src="../imgs/HM.png" />
+            </li>
+            <li class="image_customer4">
+              <img class="customer_image" src="../imgs/GHN.png" />
+            </li>
+            <li class="image_customer5">
+              <img class="customer_image" src="../imgs/MASAN.png" />
+            </li>
+            <li class="image_customer6">
+              <img class="customer_image" src="../imgs/TTCI.png" />
             </li>
           </ul>
         </div>
+      </section>
+    </main>
 
-        <!-- slide two -->
-        <div class="wrab_about--two image__container">
-          <ul class="about__content-list">
-            <li class="image_item1">
-              <img class="image__company" src="../imgs/item1.png" alt="image_company" />
-              <img class="image__company-two" src="../imgs/item2.png" alt="image_company" />
-            </li>
-            <li class="image_item2">
-              <img class="image__company-three" src="../imgs/item3.png" alt="image_company" />
-            </li>
-            <li class="image_item3">
-              <img class="image__company image__company-last" src="../imgs/item4.png" alt="image_company" />
-              <img class="image__company image__company-last2" src="../imgs/item5.png" alt="image_company" />
-            </li>
-          </ul>
-        </div>
-        <!-- slide three -->
-        <div class="wrab_about--three image__container">
-          <ul class="about__content-list">
-            <li class="image_item1">
-              <img class="image__company" src="../imgs/item1.png" alt="image_company" />
-              <img class="image__company-two" src="../imgs/item2.png" alt="image_company" />
-            </li>
-            <li class="image_item2">
-              <img class="image__company-three" src="../imgs/item3.png" alt="image_company" />
-            </li>
-            <li class="image_item3">
-              <img class="image__company image__company-last" src="../imgs/item4.png" alt="image_company" />
-              <img class="image__company image__company-last2" src="../imgs/item5.png" alt="image_company" />
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="dot__container">
-        <div class="dot-one dot dot--active" onclick="changeSlide(event, 1)"></div>
-        <div class="dot-two dot" onclick="changeSlide(event, 2)"></div>
-        <div class="dot-three dot" onclick="changeSlide(event, 3)"></div>
-      </div>
-    </section>
-    <section id="contact">
-      <h2>Khách Hàng</h2>
-      <p class="customer__description">
-        An anniversary is the date on which an event took place or an
-        institution was founded in a previous year, and may also refer to the
-        commemoration or
-      </p>
-      <div class="contact__container-content">
-        <ul class="customer_content">
-          <li class="image_customer1">
-            <img class="customer_image" src="../imgs/BGRIM.png" />
-          </li>
-          <li class="image_customer2">
-            <img class="customer_image" src="../imgs/TTC.png" />
-          </li>
-          <li class="image_customer3">
-            <img class="customer_image" src="../imgs/HM.png" />
-          </li>
-          <li class="image_customer4">
-            <img class="customer_image" src="../imgs/GHN.png" />
-          </li>
-          <li class="image_customer5">
-            <img class="customer_image" src="../imgs/MASAN.png" />
-          </li>
-          <li class="image_customer6">
-            <img class="customer_image" src="../imgs/TTCI.png" />
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <!-- <footer class="footer__container">
+    <!-- <footer class="footer__container">
     <div>
       <img src="../imgs/imagebtm.svg" alt="Company Logo" />
     </div>
@@ -149,48 +213,57 @@
     </div>
   </footer> -->
 
-  <div id="popup" class="popup hidden">
-    <div class="popup-content">
-      <span class="close" id="cancelButton">&times;</span>
-      <h2>Heading 2</h2>
-      <p class="customer__description-popup">
-        An anniversary is the date on which an event took place or
-        an institution was founded in a previous year, and may also refer to
-        the commemoration or
-      </p>
-      <div id="formContainer" class="hidden">
-        <form id="customerForm" class="submit__form">
-          <label for="name">Full Name *</label>
-          <input class="input__form" type="text" id="name" placeholder="Full Name" required />
-          <div class="submit__button">
-            <button class="confirm__button" type="button" id="confirmButton">
-              Submit
+    <div id="popup" class="popup hidden">
+      <div class="popup-content">
+        <span class="close" id="cancelButton">&times;</span>
+        <h2>Heading 2</h2>
+        <p class="customer__description-popup">
+          An anniversary is the date on which an event took place or
+          an institution was founded in a previous year, and may also refer to
+          the commemoration or
+        </p>
+        <div id="formContainer" class="hidden">
+          <form id="customerForm" class="submit__form">
+            <label for="name">Full Name *</label>
+            <input
+              class="input__form"
+              type="text"
+              id="name"
+              placeholder="Full Name"
+              required
+            />
+            <div class="submit__button">
+              <button class="confirm__button" type="button" id="confirmButton">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup__container hidden-popup" onclick="closePopupSuccess()">
+      <div class="popup-success">
+        <div class="popup-success__content">
+          <div style="width: 100%; display: flex; justify-content: end">
+            <button class="close-popup-btn" onclick="closePopupSuccess()">
+              <img src="../imgs/X.svg" alt="icon" />
             </button>
           </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="popup__container hidden-popup">
-    <div class="popup-success">
-      <div class="popup-success__content">
-        <div style="width: 100%; display: flex; justify-content: end;">
-          <button class="close-popup-btn" onclick="closePopupSuccess()">
-            <img src="../imgs/X.svg" alt="icon">
-          </button>
+          <h1 style="color: #f4811f; font-size: 42px; margin: 15px 0">
+            Thank you see you soon
+          </h1>
+          <p style="color: #ffffff; font-size: 18px; font-weight: 400">
+            No one likes big deltas between forecasts and actuals. Most models
+            though are too limited, relying on sample datasets or just gut feel.
+            Oracle Cloud ERP introduces machine-learning to
+          </p>
         </div>
-        <h1 style="color: #F4811F; font-size: 42px; margin: 15px 0;">Thank you see you soon</h1>
-        <p style="color: #FFFFFF; font-size: 18px; font-weight: 400;">No one likes big deltas between forecasts and
-          actuals. Most models though are too limited, relying on sample
-          datasets or just gut feel. Oracle Cloud ERP introduces machine-learning to</p>
       </div>
     </div>
-  </div>
 
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-  <script src="./js/script.js"></script>
-</body>
-
+    <script src="./js/script.js"></script>
+  </body>
 </html>
