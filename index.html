@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <title>Company Landing Page</title>
+    <link rel="stylesheet" href="./src/styles/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corinthia&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="container__header">
+      <div class="header__content">
+        <a href="#" class="header__container-logo">
+          <img src="./imgs/Logo.svg" alt="Company Logo" />
+          <span class="header__title">15th Annlversary</span>
+        </a>
+      </div>
+      <div class="header__content-body">
+        <div class="banner__content">
+          <div class="name_header">
+            <h2 class="banner__content--title">ARON 15th Anniversary</h2>
+            <h3 class="banner__content--des">Nhận & Cảm</h3>
+          </div>
+          <div id="header__countdown">
+            <div id="days">30 <span>ngày</span></div>
+            <div id="hours">720 <span>giờ</span></div>
+            <div id="minutes">0 <span>phút</span></div>
+            <div id="seconds">0 <span>giây</span></div>
+          </div>
+          <div class="banner__content--btn">
+            <button class="header__button">
+              <h3 class="header__button-text">Xác Nhận tham dự</h3>
+              <h3 class="header__button-text-responsive">Tham dự</h3>
+              <div>
+                <img class="form_icon" src="./imgs/arrow.png" alt="Arrow" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about">
+        <div class="about__content-header">
+          <h2>Hình Ảnh</h2>
+          <p>Cùng nhìn lại cặng đường 15 năm ...</p>
+        </div>
+        <div class="slide-container mySwiper">
+          <!-- slide one -->
+          <div
+            class="wrab_about--one image__container image__container--display"
+          >
+            <ul class="about__content-list">
+              <li class="image_item1">
+                <img
+                  class="image__company"
+                  src="./imgs/item1.jpg"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company-two"
+                  src="./imgs/item2.jpg"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item2">
+                <img
+                  class="image__company-three"
+                  src="./imgs/item3.jpg"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item3">
+                <img
+                  class="image__company image__company-last"
+                  src="./imgs/item4.jpg"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company image__company-last2"
+                  src="./imgs/item5.png"
+                  alt="image_company"
+                />
+              </li>
+            </ul>
+          </div>
+          <!-- slide two -->
+          <div class="wrab_about--two image__container">
+            <ul class="about__content-list">
+              <li class="image_item1">
+                <img
+                  class="image__company"
+                  src="./imgs/ARON_1.jpg"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company-two"
+                  src="./imgs/ARON_2.jpg"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item2">
+                <img
+                  class="image__company-three"
+                  src="./imgs/ARON_4.jpg"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item3">
+                <img
+                  class="image__company image__company-last"
+                  src="./imgs/ARON_3.jpg"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company image__company-last2"
+                  src="./imgs/ARON_5.jpg"
+                  alt="image_company"
+                />
+              </li>
+            </ul>
+          </div>
+          <!-- slide three -->
+          <div class="wrab_about--three image__container">
+            <ul class="about__content-list">
+              <li class="image_item1">
+                <img
+                  class="image__company"
+                  src="./imgs/ARON_11.jpg"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company-two"
+                  src="./imgs/ARON_7.jpg"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item2">
+                <img
+                  class="image__company-three"
+                  src="./imgs/ARON_12.jpg"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item3">
+                <img
+                  class="image__company image__company-last"
+                  src="./imgs/ARON_6.jpg"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company image__company-last2"
+                  src="./imgs/ARON_8.jpg"
+                  alt="image_company"
+                />
+              </li>
+            </ul>
+          </div>
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+        <div class="dot__container">
+          <div
+            class="dot-one dot dot--active"
+            onclick="changeSlide(event, 1)"
+          ></div>
+          <div class="dot-two dot" onclick="changeSlide(event, 2)"></div>
+          <div class="dot-three dot" onclick="changeSlide(event, 3)"></div>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Khách Hàng</h2>
+        <p class="customer__description">Cảm ơn bla bla</p>
+        <div class="contact__container-content">
+          <ul class="customer_content">
+            <li class="image_customer1">
+              <img class="customer_image" src="./imgs/BGRIM.png" />
+            </li>
+            <li class="image_customer2">
+              <img class="customer_image" src="./imgs/TTC.png" />
+            </li>
+            <li class="image_customer3">
+              <img class="customer_image" src="./imgs/HM.png" />
+            </li>
+            <li class="image_customer4">
+              <img class="customer_image" src="./imgs/GHN.png" />
+            </li>
+            <li class="image_customer5">
+              <img class="customer_image" src="./imgs/MASAN.png" />
+            </li>
+            <li class="image_customer6">
+              <img class="customer_image" src="./imgs/TTCI.png" />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- <footer class="footer__container">
+    <div>
+      <img src="../imgs/imagebtm.svg" alt="Company Logo" />
+    </div>
+    <p class="footer__copyright">&copy; 2024 Company Name. All rights reserved.</p>
+    <div>
+      <img src="../imgs/Group 1.png" alt="Company Logo" />
+      <img src="../imgs/Group 2.png" alt="Company Logo" />
+    </div>
+  </footer> -->
+
+    <div id="popup" class="popup hidden">
+      <div class="popup-content">
+        <span class="close" id="cancelButton">&times;</span>
+        <!-- <h2>Heading 2</h2>
+        <p class="customer__description-popup">
+          An anniversary is the date on which an event took place or
+          an institution was founded in a previous year, and may also refer to
+          the commemoration or
+        </p> -->
+        <div id="formContainer" class="hidden">
+          <form id="customerForm" class="submit__form">
+            <label for="name">Anh/Chị *</label>
+            <input
+              class="input__form"
+              type="text"
+              id="name"
+              placeholder="Vui lòng nhập Họ tên"
+              required
+            />
+            <div class="submit__button">
+              <button class="confirm__button" type="button" id="confirmButton">
+                Xác nhận
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup__container hidden-popup" onclick="closePopupSuccess()">
+      <div class="popup-success">
+        <div class="popup-success__content">
+          <div style="width: 100%; display: flex; justify-content: end">
+            <button class="close-popup-btn" onclick="closePopupSuccess()">
+              <img src="./imgs/X.svg" alt="icon" />
+            </button>
+          </div>
+          <h1 style="color: #f4811f; font-size: 42px; margin: 15px 0">
+            Xin cảm ơn
+          </h1>
+          <p style="color: #ffffff; font-size: 18px; font-weight: 400">
+            Cảm ơn .... Hẹn gặp Anh/Chị tại ....
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>

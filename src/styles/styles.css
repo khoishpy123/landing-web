@@ -3,18 +3,27 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   margin: 0;
   padding: 0;
 }
 
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900 */
+
+.banner__content--title {
+  font-weight: 500;
+  font-size: 70px;
+}
 .container__header {
   /* background-image: url(../../imgs/Rectangle.png); */
 }
 
 .header__content {
   background-color: #181444;
-  height: 90px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,37 +49,44 @@ body {
 /* .header__container-logo:hover {
   cursor: pointer;
 } */
-.banner__content--title {
-  font-size: 70px;
-}
 
 .header__content-body {
   height: 100vh;
   width: 100vw;
-  background-image: url(../../imgs/Banner.png);
+  background-image: url(../../imgs/Banner_new.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .banner__content {
-  padding-top: 230px;
+  padding-top: 150px;
   padding-left: 70px;
   color: #fff;
   display: flex;
   flex-direction: column;
 }
+.banner__content--des {
+  font-family: "Corinthia", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 64px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
-.header__countdown {
+#header__countdown {
   display: flex;
-  padding: 40px 0px;
+  padding-bottom: 50px;
   font-size: 60px;
-  width: 574px;
+  width: 500px;
   justify-content: space-between;
+  margin-left: -35px;
 }
 
 #days,
 #hours,
-#minutes {
+#minutes,
+#seconds {
   display: grid;
   margin: 0px 30px;
   text-align: center;
@@ -78,6 +94,7 @@ body {
 
 span {
   font-size: 18px;
+  opacity: 0.8;
 }
 
 .header__button {
@@ -85,8 +102,8 @@ span {
   border: 3px solid #f4811f;
   display: flex;
   font-size: 22px;
-  width: 354px;
-  height: 68px;
+  width: 340px;
+  height: 60px;
   justify-content: space-between;
   align-items: center;
   background: #f4811f;
@@ -102,6 +119,8 @@ span {
 
 .form_icon {
   padding-top: 5px;
+  height: 40px;
+  width: 40px;
 }
 
 #about {
@@ -169,7 +188,8 @@ p {
 
 .about__content-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 40% 30% auto;
+  grid-template-rows: 300px;
   gap: 35px;
   width: 90%;
   margin: auto;
@@ -326,6 +346,7 @@ label {
   border-radius: 35px;
   background: #f4811f;
   border: none;
+  color: #fff;
 }
 
 .confirm__button:hover {
@@ -333,7 +354,8 @@ label {
   opacity: 0.4;
 }
 
-.customer__description-popup {}
+.customer__description-popup {
+}
 
 .footer__container {
   display: flex;
@@ -350,16 +372,18 @@ label {
 .header__button-text {
   padding-left: 70px;
   font-size: 21px;
+  font-weight: 100;
 }
 
-.slide-container {}
+.slide-container {
+}
 
 .dot__container {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 20px;
-  display: none;
+  /* display: none; */
 }
 
 .dot {
@@ -390,7 +414,7 @@ label {
 
 .popup-success {
   width: 60%;
-  background-color: #3A3632;
+  background-color: #3a3632;
 }
 
 .popup-success__content {
@@ -443,7 +467,8 @@ label {
   width: fit-content;
   object-fit: cover;
 }
-@keyframes opacityDisplay {
+
+/* @keyframes opacityDisplay {
   from {
     opacity: 0.5;
   }
@@ -451,7 +476,21 @@ label {
   to {
     opacity: 1;
   }
+} */
+
+/* .swiper-slides {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
 }
+
+.swiper-slides img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+} */
 
 @media only screen and (max-width: 769px) {
   .banner__content {
@@ -464,23 +503,26 @@ label {
 
   #days,
   #hours,
-  #minutes {
+  #minutes,
+  #seconds {
     display: flex;
     margin: 0px 30px;
     gap: 20px;
     justify-content: center;
+    align-items: center;
   }
 
   .banner__content--des,
   .banner__content--title {
     text-align: center;
+    font-weight: 400;
   }
 
   .banner__content--title {
     font-size: 3rem;
   }
 
-  .header__countdown {
+  #header__countdown {
     flex-direction: column;
     width: 100%;
     gap: 30px;
@@ -517,7 +559,7 @@ label {
   }
 
   .about__content-list {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 40% 30% auto;
     grid-template-columns: 1fr;
   }
 
