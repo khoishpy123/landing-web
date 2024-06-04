@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (name) {
       const templateParams = {
         to_email: "ARON@gmail.com",
-        from_name: "Website Form",
+        from_name: "ARON 15th Anniversary",
         message: `Họ Tên Khách Hàng: ${name}`,
       };
 
