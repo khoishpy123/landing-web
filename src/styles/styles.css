@@ -37,6 +37,7 @@ body {
 .header__title {
   color: #fff;
   font-size: 16px;
+  padding-left: 10px;
 }
 
 .header__container-logo {
@@ -505,29 +506,31 @@ label {
   #hours,
   #minutes,
   #seconds {
-    display: flex;
+    /* display: flex; */
     margin: 0px 30px;
-    gap: 20px;
+    /* gap: 20px; */
     justify-content: center;
     align-items: center;
   }
-
   .banner__content--des,
   .banner__content--title {
     text-align: center;
     font-weight: 400;
+    padding-top: 110px;
   }
 
   .banner__content--title {
     font-size: 3rem;
+    display: none;
   }
 
   #header__countdown {
-    flex-direction: column;
+    /* flex-direction: column; */
     width: 100%;
-    gap: 30px;
-    font-size: 40px;
+    /* gap: 30px; */
+    font-size: 20px;
     padding-top: 0;
+    margin-left: 0;
   }
 
   .header__button {
@@ -567,7 +570,9 @@ label {
     flex-direction: column;
   } */
 }
-
+.header__content-body {
+  background-image: url(../../imgs/banner-mobile.jpg);
+}
 @media only screen and (max-width: 1200px) {
   /* .customer_content {
     flex-direction: column;
