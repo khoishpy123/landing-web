@@ -2,10 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
     <title>Company Landing Page</title>
     <link rel="stylesheet" href="./src/styles/styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corinthia&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -19,10 +33,8 @@
       <div class="header__content-body">
         <div class="banner__content">
           <div class="name_header">
-            <h2 class="banner__content--title">ARON hành trình 15 năm</h2>
-            <h3 class="banner__content--des" style="font-size: 30px">
-              Nhận & Cảm
-            </h3>
+            <h2 class="banner__content--title">ARON 15th Anniversary</h2>
+            <h3 class="banner__content--des">Nhận & Cảm</h3>
           </div>
           <div id="header__countdown">
             <div id="days">30 <span>ngày</span></div>
@@ -32,8 +44,8 @@
           </div>
           <div class="banner__content--btn">
             <button class="header__button">
-              <span class="header__button-text">Xác Nhận tham dự</span>
-              <span class="header__button-text-responsive">Tham dự</span>
+              <h3 class="header__button-text">Xác Nhận tham dự</h3>
+              <h3 class="header__button-text-responsive">Tham dự</h3>
               <div>
                 <img class="form_icon" src="./imgs/arrow.png" alt="Arrow" />
               </div>
@@ -46,10 +58,10 @@
     <main>
       <section id="about">
         <div class="about__content-header">
-          <h2>Thư Viện Hình Ảnh</h2>
+          <h2>Hình Ảnh</h2>
           <p>Cùng nhìn lại cặng đường 15 năm ...</p>
         </div>
-        <div class="slide-container">
+        <div class="slide-container mySwiper">
           <!-- slide one -->
           <div
             class="wrab_about--one image__container image__container--display"
@@ -88,7 +100,6 @@
               </li>
             </ul>
           </div>
-
           <!-- slide two -->
           <div class="wrab_about--two image__container">
             <ul class="about__content-list">
@@ -161,6 +172,9 @@
               </li>
             </ul>
           </div>
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+          <!-- <div class="swiper-pagination"></div> -->
         </div>
         <div class="dot__container">
           <div
@@ -173,11 +187,7 @@
       </section>
       <section id="contact">
         <h2>Khách Hàng</h2>
-        <p class="customer__description">
-          An anniversary is the date on which an event took place or an
-          institution was founded in a previous year, and may also refer to the
-          commemoration or
-        </p>
+        <p class="customer__description">Cảm ơn bla bla</p>
         <div class="contact__container-content">
           <ul class="customer_content">
             <li class="image_customer1">
@@ -217,25 +227,25 @@
     <div id="popup" class="popup hidden">
       <div class="popup-content">
         <span class="close" id="cancelButton">&times;</span>
-        <h2>Heading 2</h2>
+        <!-- <h2>Heading 2</h2>
         <p class="customer__description-popup">
           An anniversary is the date on which an event took place or
           an institution was founded in a previous year, and may also refer to
           the commemoration or
-        </p>
+        </p> -->
         <div id="formContainer" class="hidden">
           <form id="customerForm" class="submit__form">
-            <label for="name">Full Name *</label>
+            <label for="name">Anh/Chị *</label>
             <input
               class="input__form"
               type="text"
               id="name"
-              placeholder="Full Name"
+              placeholder="Vui lòng nhập Họ tên"
               required
             />
             <div class="submit__button">
               <button class="confirm__button" type="button" id="confirmButton">
-                Submit
+                Xác nhận
               </button>
             </div>
           </form>
@@ -252,16 +262,16 @@
             </button>
           </div>
           <h1 style="color: #f4811f; font-size: 42px; margin: 15px 0">
-            Thank you see you soon
+            Xin cảm ơn
           </h1>
           <p style="color: #ffffff; font-size: 18px; font-weight: 400">
-            No one likes big deltas between forecasts and actuals. Most models
-            though are too limited, relying on sample datasets or just gut feel.
-            Oracle Cloud ERP introduces machine-learning to
+            Cảm ơn .... Hẹn gặp Anh/Chị tại ....
           </p>
         </div>
       </div>
     </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 

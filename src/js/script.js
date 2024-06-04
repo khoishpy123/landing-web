@@ -158,7 +158,7 @@ const changeSlide = (event, index) => {
 const slideLoop = () => {
   setInterval(() => {
     changeSlide({ target: countDot }, countIndex);
-  }, 3000);
+  }, 6000);
 };
 
 // slideLoop();
@@ -203,3 +203,23 @@ var x = setInterval(function () {
     document.getElementById("header__countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+//auto slide
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  slidesPerView: 1,
+  grabCursor: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

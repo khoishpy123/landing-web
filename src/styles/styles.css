@@ -3,11 +3,20 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   margin: 0;
   padding: 0;
 }
 
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900 */
+
+.banner__content--title {
+  font-weight: 500;
+  font-size: 70px;
+}
 .container__header {
   /* background-image: url(../../imgs/Rectangle.png); */
 }
@@ -40,9 +49,6 @@ body {
 /* .header__container-logo:hover {
   cursor: pointer;
 } */
-.banner__content--title {
-  font-size: 70px;
-}
 
 .header__content-body {
   height: 100vh;
@@ -60,14 +66,19 @@ body {
   flex-direction: column;
 }
 .banner__content--des {
+  font-family: "Corinthia", cursive;
   font-weight: 400;
+  font-style: normal;
+  font-size: 64px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 #header__countdown {
   display: flex;
   padding-bottom: 50px;
   font-size: 60px;
-  width: 574px;
+  width: 500px;
   justify-content: space-between;
   margin-left: -35px;
 }
@@ -83,6 +94,7 @@ body {
 
 span {
   font-size: 18px;
+  opacity: 0.8;
 }
 
 .header__button {
@@ -90,8 +102,8 @@ span {
   border: 3px solid #f4811f;
   display: flex;
   font-size: 22px;
-  width: 354px;
-  height: 68px;
+  width: 340px;
+  height: 60px;
   justify-content: space-between;
   align-items: center;
   background: #f4811f;
@@ -107,6 +119,8 @@ span {
 
 .form_icon {
   padding-top: 5px;
+  height: 40px;
+  width: 40px;
 }
 
 #about {
@@ -332,6 +346,7 @@ label {
   border-radius: 35px;
   background: #f4811f;
   border: none;
+  color: #fff;
 }
 
 .confirm__button:hover {
@@ -357,6 +372,7 @@ label {
 .header__button-text {
   padding-left: 70px;
   font-size: 21px;
+  font-weight: 100;
 }
 
 .slide-container {
@@ -367,7 +383,7 @@ label {
   display: flex;
   justify-content: center;
   gap: 20px;
-  /* display: none; */
+  display: none;
 }
 
 .dot {
@@ -431,6 +447,20 @@ label {
   to {
     opacity: 1;
   }
+} */
+
+/* .swiper-slides {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slides img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
 } */
 
 @media only screen and (max-width: 769px) {
