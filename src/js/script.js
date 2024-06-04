@@ -161,3 +161,19 @@ const closePopupSuccess = () => {
   popupSuccessEl.classList.add("hidden-popup")
   isPopupSuccess = false
 }
+
+// Initialize Splide
+document.addEventListener('DOMContentLoaded', function () {
+  var splide = new Splide('.splide', {
+    type: 'loop',
+    perPage: 6,
+    arrows: false,
+    perMove: 1,
+    rewind : true,
+    // autoplay: true,
+    interval: 3000,
+    pauseOnHover: false,
+    resetProgress: false,
+    pagination: false
+  }).mount();
+});

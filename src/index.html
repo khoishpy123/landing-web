@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Company Landing Page</title>
   <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
@@ -106,35 +107,40 @@
         <div class="dot-three dot" onclick="changeSlide(event, 3)"></div>
       </div>
     </section>
-    <section id="contact">
+    <section id="contact" class="splide customer-block" aria-labelledby="carousel-heading">
       <h2>Khách Hàng</h2>
       <p class="customer__description">
         An anniversary is the date on which an event took place or an
         institution was founded in a previous year, and may also refer to the
         commemoration or
       </p>
-      <div class="contact__container-content">
-        <ul class="customer_content">
-          <li class="image_customer1">
-            <img class="customer_image" src="../imgs/BGRIM.png" />
+      <div class="splide__track customer-slide__block">
+        <ul class="splide__list customer-slide-container customer_content">
+          <li class="splide__slide image_customer--item">
+            <div class="image-block"><img class="customer_image" src="../imgs/BGRIM.png" /></div>
           </li>
-          <li class="image_customer2">
-            <img class="customer_image" src="../imgs/TTC.png" />
+          <li class="splide__slide image_customer--item">
+            <div class="image-block"><img class="customer_image" src="../imgs/TTC.png" /></div>
           </li>
-          <li class="image_customer3">
-            <img class="customer_image" src="../imgs/HM.png" />
+          <li class="splide__slide image_customer--item">
+            <div class="image-block"><img class="customer_image" src="../imgs/HM.png" /></div>
           </li>
-          <li class="image_customer4">
-            <img class="customer_image" src="../imgs/GHN.png" />
+          <li class="splide__slide image_customer--item">
+            <div class="image-block"><img class="customer_image" src="../imgs/GHN.png" /></div>
           </li>
-          <li class="image_customer5">
-            <img class="customer_image" src="../imgs/MASAN.png" />
+          <li class="splide__slide image_customer--item">
+            <div class="image-block"><img class="customer_image" src="../imgs/MASAN.png" /></div>
           </li>
-          <li class="image_customer6">
-            <img class="customer_image" src="../imgs/TTCI.png" />
+          <li class="splide__slide image_customer--item">
+            <div class="image-block"><img class="customer_image" src="../imgs/TTCI.png" /></div>
           </li>
         </ul>
       </div>
+    </section>
+    <section class="splide customer-block">
+      <h2 id="carousel-heading">Splide Basic HTML Example</h2>
+
+
     </section>
   </main>
 
@@ -189,7 +195,7 @@
   </div>
 
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
 
