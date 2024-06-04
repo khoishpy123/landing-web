@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: "Libre Franklin", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   margin: 0;
@@ -91,6 +91,7 @@ body {
   display: grid;
   margin: 0px 30px;
   text-align: center;
+  font-family: "Libre Franklin", sans-serif;
 }
 
 span {
@@ -100,16 +101,15 @@ span {
 
 .header__button {
   border-radius: 35px;
-  border: 3px solid #f4811f;
+  border: 3px solid #ffffff5c;
   display: flex;
   font-size: 22px;
   width: 340px;
   height: 60px;
   justify-content: space-between;
   align-items: center;
-  background: #f4811f;
+  background: #ffffff5c;
   color: #fff;
-  box-shadow: 5px 5px 5px #1e1e28;
 }
 
 .header__button:hover {
@@ -120,8 +120,9 @@ span {
 
 .form_icon {
   padding-top: 5px;
-  height: 40px;
-  width: 40px;
+  height: 58px;
+  /* width: 40px; */
+  margin-right: -7px;
 }
 
 #about {
@@ -150,14 +151,14 @@ span {
   display: flex;
 }
 .images__description {
-  width: 60%;
+  /* width: 60%;
   margin: auto;
   font-size: 13px;
-  padding-bottom: 35px;
+  padding-bottom: 35px; */
 }
 
 .customer__description {
-  /* width: 38%; */
+  width: 100%;
 }
 
 .contact__container-content {
@@ -171,8 +172,13 @@ h2 {
 }
 
 p {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
+  opacity: 0.4;
+  width: 60%;
+  margin: auto;
+  padding-bottom: 40px;
+  padding-top: 20px;
 }
 
 /* li {
@@ -340,6 +346,10 @@ label {
   padding: 14px;
   margin: 12px 0 30px 0;
   border: 1px solid #ccc;
+  font-family: "Montserrat", sans-serif;
+}
+.title_pop-up_success {
+  font-family: "Montserrat", sans-serif;
 }
 
 .submit__button {
@@ -507,6 +517,9 @@ label {
     justify-content: center;
     padding: 10px;
   }
+  span {
+    font-size: 10px;
+  }
 
   #days,
   #hours,
@@ -517,6 +530,7 @@ label {
     /* gap: 20px; */
     justify-content: center;
     align-items: center;
+    font-size: 25px;
   }
   .banner__content--des,
   .banner__content--title {
