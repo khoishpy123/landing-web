@@ -9,10 +9,10 @@
     <title>Company Landing Page</title>
     <link rel="stylesheet" href="./src/styles/styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- Link Swiper's CSS -->
+    <!-- Link splide CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -185,7 +185,7 @@
           <div class="dot-three dot" onclick="changeSlide(event, 3)"></div>
         </div>
       </section>
-      <section id="contact">
+      <!-- <section id="contact">
         <h2>Khách Hàng</h2>
         <p class="customer__description">Cảm ơn bla bla</p>
         <div class="contact__container-content">
@@ -210,6 +210,91 @@
             </li>
           </ul>
         </div>
+      </section> -->
+      <section
+        id="contact"
+        class="splide customer-block"
+        aria-labelledby="carousel-heading"
+      >
+        <h2>Khách Hàng</h2>
+        <p class="customer__description">Cảm ơn bla bla</p>
+        <div class="splide__track customer-slide__block">
+          <ul class="splide__list customer-slide-container customer_content">
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/BGRIM.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TTC.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/HM.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/GHN.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/MASAN.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TTCI.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TRUNGSON.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/AULAC.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TTC Sugarpng.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/DILIGO.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/SGP.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/KIM.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/THIENNAM.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TCH.png" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="splide customer-block">
+        <h2 id="carousel-heading">Splide Basic HTML Example</h2>
       </section>
     </main>
 
@@ -270,11 +355,8 @@
         </div>
       </div>
     </div>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="./src/js/script.js"></script>
   </body>
 </html>

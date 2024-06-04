@@ -161,7 +161,7 @@ const slideLoop = () => {
   }, 6000);
 };
 
-// slideLoop();
+slideLoop();
 
 const popupSuccessEl = document.querySelector(".popup__container");
 
@@ -204,39 +204,18 @@ var x = setInterval(function () {
   }
 }, 1000);
 
-//auto slide
-var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
-  slidesPerView: 1,
-  grabCursor: true,
-  centeredSlides: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-
 // Initialize Splide
-document.addEventListener('DOMContentLoaded', function () {
-  var splide = new Splide('.splide', {
-    type: 'loop',
+document.addEventListener("DOMContentLoaded", function () {
+  var splide = new Splide(".splide", {
+    type: "loop",
     perPage: 6,
     arrows: false,
     perMove: 1,
-    rewind : true,
+    rewind: true,
     autoplay: true,
     interval: 3000,
     pauseOnHover: false,
     resetProgress: false,
-    pagination: false
+    pagination: false,
   }).mount();
 });

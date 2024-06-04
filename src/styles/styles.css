@@ -462,7 +462,7 @@ label {
   align-items: center;
 }
 
-.image-block{
+.image-block {
   height: auto;
   width: fit-content;
   object-fit: cover;
