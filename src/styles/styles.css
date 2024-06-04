@@ -149,9 +149,15 @@ span {
   list-style: none;
   display: flex;
 }
+.images__description {
+  width: 60%;
+  margin: auto;
+  font-size: 13px;
+  padding-bottom: 35px;
+}
 
 .customer__description {
-  width: 38%;
+  /* width: 38%; */
 }
 
 .contact__container-content {
@@ -569,10 +575,11 @@ label {
   /* .customer_content {
     flex-direction: column;
   } */
+  .header__content-body {
+    background-image: url(../../imgs/banner-mobile.jpg);
+  }
 }
-.header__content-body {
-  background-image: url(../../imgs/banner-mobile.jpg);
-}
+
 @media only screen and (max-width: 1200px) {
   /* .customer_content {
     flex-direction: column;
