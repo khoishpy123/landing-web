@@ -161,7 +161,7 @@ const slideLoop = () => {
   }, 6000);
 };
 
-// slideLoop();
+slideLoop();
 
 const popupSuccessEl = document.querySelector(".popup__container");
 
@@ -193,7 +193,7 @@ var x = setInterval(function () {
   // document.getElementById("header__countdown").innerHTML =
   //   days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
   document.getElementById("days").innerHTML = `${days} <span>ngày</span>`;
-  document.getElementById("hours").innerHTML = `${hours} <span>giời</span>`;
+  document.getElementById("hours").innerHTML = `${hours} <span>giờ</span>`;
   document.getElementById("minutes").innerHTML = `${minutes} <span>phút</span>`;
   document.getElementById("seconds").innerHTML = `${seconds} <span>giây</span>`;
 
