@@ -212,9 +212,9 @@ body {
   padding-bottom: 35px; */
 }
 
-.customer__description {
+/* .customer__description {
   width: 100%;
-}
+} */
 
 .contact__container-content {
   width: 90%;
@@ -222,7 +222,7 @@ body {
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 40px;
   margin-bottom: 0;
   font-weight: 500;
 }
@@ -506,7 +506,7 @@ label {
 }
 
 .popup-success {
-  width: 60%;
+  width: 40%;
   background-color: #3a3632;
 }
 

@@ -498,20 +498,25 @@
         </p> -->
         <div id="formContainer" class="hidden">
           <form id="customerForm" class="submit__form">
-            <label style="font-family: Montserrat, sans-serif" for="name"
-              >Anh/Chị *</label
-            >
+            <label
+              style="font-family: Montserrat, sans-serif"
+              for="name"
+              data-i18n="popup_label"
+            ></label>
             <input
               class="input__form"
               type="text"
               id="name"
-              placeholder="Vui lòng nhập Họ tên"
+              placeholder="Please enter your full name."
               required
             />
             <div class="submit__button">
-              <button class="confirm__button" type="button" id="confirmButton">
-                Xác nhận
-              </button>
+              <button
+                data-i18n="button_confirm"
+                class="confirm__button"
+                type="button"
+                id="confirmButton"
+              ></button>
             </div>
           </form>
         </div>
@@ -535,10 +540,16 @@
           >
             Thank you & See you !
           </h1>
-          <p style="color: #ffffff; font-size: 18px; font-weight: 400">
-            Cảm ơn Anh/ Chị đã dành thời gian tham dự sự kiện quan trọng này của
-            ARON. ARON mong chờ được đón tiếp anh chị.
-          </p>
+          <p
+            data-i18n="description_pop_up_success"
+            style="
+              color: #ffffff;
+              font-size: 18px;
+              font-weight: 400;
+              text-align: center;
+              width: 100%;
+            "
+          ></p>
         </div>
       </div>
     </div>
