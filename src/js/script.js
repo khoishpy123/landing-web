@@ -155,13 +155,9 @@ const changeSlide = (event, index) => {
   }
 };
 
-const slideLoop = () => {
-  setInterval(() => {
-    changeSlide({ target: countDot }, countIndex);
-  }, 6000);
-};
-
-slideLoop();
+const imageListLoop = setInterval(() => {
+  changeSlide({ target: countDot }, countIndex);
+}, 6000);
 
 const popupSuccessEl = document.querySelector(".popup__container");
 
@@ -192,10 +188,10 @@ var x = setInterval(function () {
   // Output the result in an element with id="demo"
   // document.getElementById("header__countdown").innerHTML =
   //   days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-  document.getElementById("days").innerHTML = `${days} <span>ngày</span>`;
-  document.getElementById("hours").innerHTML = `${hours} <span>giờ</span>`;
-  document.getElementById("minutes").innerHTML = `${minutes} <span>phút</span>`;
-  document.getElementById("seconds").innerHTML = `${seconds} <span>giây</span>`;
+  document.querySelector(".days").innerHTML = `${days}`;
+  document.querySelector(".hours").innerHTML = `${hours}`;
+  document.querySelector(".minutes").innerHTML = `${minutes}`;
+  document.querySelector(".seconds").innerHTML = `${seconds}`;
 
   // If the count down is over, write some text
   if (distance < 0) {
@@ -219,3 +215,79 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: false,
   }).mount();
 });
+
+// open images
+const popupImageContainer = document.querySelector(".popup__image__container")
+const popupImage = document.querySelector(".popup__image")
+
+const handleZoomImage = (event) => {
+  event.target.getAttribute("src")
+  popupImageContainer.classList.remove("hidden-popup")
+  popupImage.setAttribute("src", event.target.getAttribute("src"))
+}
+
+const closeImagePopup = () => {
+  popupImageContainer.classList.add("hidden-popup")
+}
+
+// Menu language
+const menuLanguage = document.querySelector(".menu__language")
+const languageBtn = document.querySelector(".language")
+
+const openMenuLanguage = () => {
+  menuLanguage.classList.add("show")
+}
+
+// document.addEventListener('click', (event) => {
+//   if (!menuLanguage.contains(event.target) && !languageBtn.contains(event.target)) {
+//     menuLanguage.classList.remove("show")
+//   }
+// });
+
+
+//i18n
+const resources = {
+  vi: {
+    translation: {
+      "day": "ngàysss",
+      "receiveAndFeel": "Nhận & Cảm",
+      "acceptJoin": "Xác nhận thạm dự",
+    }
+  },
+  en: {
+    translation: {
+      "day": "days",
+      "receiveAndFeel": "Receive and Feel",
+      "acceptJoin": "Confirm participation",
+    }
+  }
+};
+
+i18next
+  .use(i18nextBrowserLanguageDetector)
+  .init({
+    resources,
+    fallbackLng: 'vi',
+    debug: true
+  }, function (err, t) {
+    // init set content
+    updateContent();
+  });
+
+function updateContent() {
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    element.textContent = i18next.t(key);
+  });
+}
+
+
+const changeLanguage = (selectedLanguage) => {
+  i18next.changeLanguage(selectedLanguage, updateContent);
+  document.querySelector(".menu__language").classList.remove("show")
+  console.log(menuLanguage.classList);
+}
+
+// languageSelect.value = i18next.language || 'en';
+
+updateContent();
