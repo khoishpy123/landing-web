@@ -752,3 +752,11 @@ label {
     display: none;
   }
 }
+
+/* hack css */
+@supports (-webkit-overflow-scrolling: touch) {
+  .popup__image {
+    width: 100%;
+    height: auto;
+  }
+}
