@@ -231,11 +231,19 @@ const closeImagePopup = () => {
 };
 
 // Menu language
+const language = 'Vietnamese'
 const menuLanguage = document.querySelector(".menu__language");
 const languageBtn = document.querySelector(".language");
+let isOpenLanguageMenu = false
 
 const openMenuLanguage = () => {
-  menuLanguage.classList.add("show")
+  if (isOpenLanguageMenu) {
+    menuLanguage.classList.remove("show")
+    isOpenLanguageMenu = false
+  } else {
+    menuLanguage.classList.add("show")
+    isOpenLanguageMenu = true
+  }
 }
 
 document.addEventListener('click', (event) => {
