@@ -41,7 +41,8 @@ body {
   background-color: #fff;
   color: #000000;
   position: absolute;
-  top: 40px;
+  top: 60px;
+  right: 1%;
   font-size: 18px;
   font-weight: 400;
   border-radius: 9px;
@@ -58,6 +59,7 @@ body {
 
 .menu__language ul li {
   padding: 10px 20px;
+  cursor: pointer;
 }
 
 .menu__language ul li:hover {

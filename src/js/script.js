@@ -236,13 +236,15 @@ const languageBtn = document.querySelector(".language")
 
 const openMenuLanguage = () => {
   menuLanguage.classList.add("show")
+  console.log('open');
 }
 
-// document.addEventListener('click', (event) => {
-//   if (!menuLanguage.contains(event.target) && !languageBtn.contains(event.target)) {
-//     menuLanguage.classList.remove("show")
-//   }
-// });
+document.addEventListener('click', (event) => {
+  if (!menuLanguage.contains(event.target) && !languageBtn.contains(event.target)) {
+    menuLanguage.classList.remove("show")
+    console.log('close');
+  }
+});
 
 
 //i18n
@@ -284,8 +286,7 @@ function updateContent() {
 
 const changeLanguage = (selectedLanguage) => {
   i18next.changeLanguage(selectedLanguage, updateContent);
-  document.querySelector(".menu__language").classList.remove("show")
-  console.log(menuLanguage.classList);
+  menuLanguage.classList.remove("show")
 }
 
 // languageSelect.value = i18next.language || 'en';
