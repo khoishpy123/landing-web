@@ -48,6 +48,7 @@ body {
   border-radius: 9px;
   display: none;
 }
+
 .button_hiden {
 }
 
@@ -64,6 +65,7 @@ body {
 }
 .menu__language ul li {
   padding: 10px 20px;
+  cursor: pointer;
 }
 
 .menu__language ul li:hover {

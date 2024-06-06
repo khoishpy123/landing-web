@@ -231,6 +231,7 @@ const closeImagePopup = () => {
 };
 
 // Menu language
+const language = "Vietnamese";
 const menuLanguage = document.querySelector(".menu__language");
 const languageBtn = document.querySelector(".language");
 let isOpenLanguageMenu = false;
@@ -244,6 +245,16 @@ const openMenuLanguage = () => {
     isOpenLanguageMenu = true;
   }
 };
+
+document.addEventListener("click", (event) => {
+  if (
+    !menuLanguage.contains(event.target) &&
+    !languageBtn.contains(event.target)
+  ) {
+    menuLanguage.classList.remove("show");
+  }
+});
+
 document.addEventListener("click", (event) => {
   if (
     !menuLanguage.contains(event.target) &&
@@ -322,8 +333,7 @@ function updateContent() {
 
 const changeLanguage = (selectedLanguage) => {
   i18next.changeLanguage(selectedLanguage, updateContent);
-  document.querySelector(".menu__language").classList.remove("show");
-  console.log(menuLanguage.classList);
+  menuLanguage.classList.remove("show");
 };
 
 // languageSelect.value = i18next.language || "en";
