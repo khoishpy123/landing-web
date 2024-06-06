@@ -231,7 +231,6 @@ const closeImagePopup = () => {
 };
 
 // Menu language
-const language = 'Vietnamese'
 const menuLanguage = document.querySelector(".menu__language");
 const languageBtn = document.querySelector(".language");
 let isOpenLanguageMenu = false
@@ -309,6 +308,8 @@ const resources = {
   },
 };
 
+const inputForm = document.querySelector(".input__form");
+
 i18next.use(i18nextBrowserLanguageDetector).init(
   {
     resources,
@@ -323,7 +324,8 @@ i18next.use(i18nextBrowserLanguageDetector).init(
 
 function updateContent() {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.getAttribute("data-i18n");
+    const key = element.getAttribute("data-i18n")
+    inputForm.setAttribute("placeholder", i18next.t('menu__language'))
     element.textContent = i18next.t(key);
   });
 }
