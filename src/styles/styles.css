@@ -47,6 +47,8 @@ body {
   border-radius: 9px;
   display: none;
 }
+.button_hiden {
+}
 
 .menu__language ul {
   list-style-type: none;

@@ -251,6 +251,7 @@ document.addEventListener("click", (event) => {
 const resources = {
   vi: {
     translation: {
+      menu__language: "Vietnamese",
       day: "ngày",
       hours: "giờ",
       minutes: "phút",
@@ -272,6 +273,7 @@ const resources = {
   },
   en: {
     translation: {
+      menu__language: "EngLish",
       day: "days",
       hours: "hours",
       minutes: "minutes",
