@@ -632,6 +632,9 @@ label {
   /* span {
     font-size: 10px;
   } */
+  .form_icon {
+    margin-right: -20px;
+  }
   .unit {
     font-size: 12px;
   }
