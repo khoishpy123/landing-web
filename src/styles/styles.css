@@ -48,6 +48,8 @@ body {
   border-radius: 9px;
   display: none;
 }
+.button_hiden {
+}
 
 .menu__language ul {
   list-style-type: none;
@@ -56,7 +58,10 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+.unit {
+  font-size: 18px;
+  opacity: 0.6;
+}
 .menu__language ul li {
   padding: 10px 20px;
   cursor: pointer;
@@ -148,19 +153,21 @@ body {
   text-align: center;
   font-family: "Libre Franklin", sans-serif;
   font-size: 50px;
+  font-weight: 600;
 }
 
 .header__button {
   border-radius: 35px;
-  border: 3px solid #ffffff5c;
+  border: 0px solid #ffffff5c;
   display: flex;
   font-size: 22px;
-  width: 340px;
+  width: 315px;
   height: 60px;
   justify-content: space-between;
   align-items: center;
   background: #ffffff5c;
   color: #fff;
+  box-shadow: 3px 3px 3px #6b636387;
 }
 
 .header__button:hover {
@@ -209,9 +216,9 @@ body {
   padding-bottom: 35px; */
 }
 
-.customer__description {
+/* .customer__description {
   width: 100%;
-}
+} */
 
 .contact__container-content {
   width: 90%;
@@ -219,12 +226,13 @@ body {
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 40px;
   margin-bottom: 0;
+  font-weight: 500;
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   opacity: 0.4;
   width: 65%;
@@ -428,7 +436,8 @@ label {
   opacity: 0.4;
 }
 
-.customer__description-popup {}
+.customer__description-popup {
+}
 
 .footer__container {
   display: flex;
@@ -443,12 +452,13 @@ label {
 }
 
 .header__button-text {
-  padding-left: 70px;
-  font-size: 21px;
-  font-weight: 100;
+  padding-left: 35px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.slide-container {}
+.slide-container {
+}
 
 .dot__container {
   margin-top: 30px;
@@ -500,7 +510,7 @@ label {
 }
 
 .popup-success {
-  width: 60%;
+  width: 40%;
   background-color: #3a3632;
 }
 
@@ -614,8 +624,11 @@ label {
     padding: 10px;
   }
 
-  span {
+  /* span {
     font-size: 10px;
+  } */
+  .unit {
+    font-size: 12px;
   }
 
   #days,
@@ -623,18 +636,19 @@ label {
   #minutes,
   #seconds {
     /* display: flex; */
-    margin: 0px 30px;
+    margin: 0;
     /* gap: 20px; */
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .banner__content--des,
   .banner__content--title {
     text-align: center;
     font-weight: 400;
-    padding-top: 110px;
+    padding-top: 300px;
+    font-size: 54px;
   }
 
   .banner__content--title {
@@ -644,12 +658,13 @@ label {
 
   #header__countdown {
     /* flex-direction: column; */
-    width: 100%;
+    width: 70%;
     /* gap: 30px; */
-    font-size: 20px;
+    /* font-size: 23px; */
     padding-top: 0;
-    margin-left: 0;
-    flex-wrap: wrap;
+    /* margin-left: 0; */
+    /* flex-wrap: wrap; */
+    margin: 0px auto;
   }
 
   .header__button {
@@ -699,7 +714,6 @@ label {
   .popup-success__content p {
     width: 100%;
   }
-
 }
 
 @media only screen and (max-width: 1300px) {

@@ -1,158 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <title>Company Landing Page</title>
+    <link rel="stylesheet" href="./src/styles/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Link splide CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+    <link rel="icon" href="imgs/logo-aron.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://unpkg.com/i18next@21.8.13/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@6.1.5/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corinthia&family=Libre+Franklin+Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <title>Company Landing Page</title>
-  <link rel="stylesheet" href="./src/styles/styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- Link splide CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
-  <link rel="icon" href="imgs/logo-aron.png" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <script src="https://unpkg.com/i18next@21.8.13/dist/umd/i18next.min.js"></script>
-  <script
-    src="https://unpkg.com/i18next-browser-languagedetector@6.1.5/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Corinthia&family=Libre+Franklin+Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <header class="container__header">
-    <div class="header__content">
-      <div class="header__block">
-        <a href="#" class="header__container-logo">
-          <img src="./imgs/Logo.svg" alt="Company Logo" />
-          <span class="header__title">15th Anniversary</span>
-        </a>
-        <div class="language" onclick="openMenuLanguage()">
-          Vietnamese
-          <img src="./imgs/arrow-down-icon.svg" alt="icon">
-        </div>
-        <div class="menu__language">
-          <ul>
-            <li onclick="changeLanguage('vi')">Vietnamese</li>
-            <li onclick="changeLanguage('en')">English</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="header__content-body">
-      <div class="banner__content">
-        <div class="name_header">
-          <h2 style="font-family: Montserrat, sans-serif" class="banner__content--title">
-            ARON 15th Anniversary
-          </h2>
-          <h3 class="banner__content--des">Nhận & Cảm</h3>
-        </div>
-        <div id="header__countdown">
-          <div id="days"><span class="days"></span> <span data-i18n="day"></span></div>
-          <div id="hours"><span class="hours"></span> <span data-i18n="day"></span></div>
-          <div id="minutes"><span class="minutes"></span> <span data-i18n="day"></span></div>
-          <div id="seconds"><span class="seconds"></span> <span data-i18n="day"></span></div>
-        </div>
-        <div class="banner__content--btn">
-          <button class="header__button">
-            <h3 class="header__button-text" data-i18n="acceptJoin"></h3>
-            <h3 class="header__button-text-responsive">Tham dự</h3>
-            <div>
-              <img class="form_icon" src="./imgs/Arrow right alt.png" alt="Arrow" />
+  <body>
+    <header class="container__header">
+      <div class="header__content">
+        <div class="header__block">
+          <a href="#" class="header__container-logo">
+            <img src="./imgs/Logo.svg" alt="Company Logo" />
+            <span class="header__title">15th Anniversary</span>
+          </a>
+          <div class="language" onclick="openMenuLanguage()">
+            Vietnamese
+            <img src="./imgs/arrow-down-icon.svg" alt="icon" />
+            <div class="menu__language">
+              <ul>
+                <li onclick="changeLanguage('vi')">Vietnamese</li>
+                <li onclick="changeLanguage('en')">English</li>
+              </ul>
             </div>
-          </button>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+      <div class="header__content-body">
+        <div class="banner__content">
+          <div class="name_header">
+            <h2
+              style="font-family: Montserrat, sans-serif"
+              class="banner__content--title"
+            >
+              ARON 15th Anniversary
+            </h2>
+            <h3 class="banner__content--des">Nhận & Cảm</h3>
+          </div>
+          <div id="header__countdown">
+            <div id="days">
+              <span class="days"></span>
+              <span data-i18n="day" class="unit"></span>
+            </div>
+            <div id="hours">
+              <span class="hours"></span>
+              <span data-i18n="hours" class="unit"></span>
+            </div>
+            <div id="minutes">
+              <span class="minutes"></span>
+              <span data-i18n="minutes" class="unit"></span>
+            </div>
+            <div id="seconds">
+              <span class="seconds"></span>
+              <span data-i18n="seconds" class="unit"></span>
+            </div>
+          </div>
+          <div class="banner__content--btn">
+            <button class="header__button">
+              <div class="button_hiden"></div>
+              <h3 class="header__button-text" data-i18n="acceptJoin"></h3>
+              <h3 class="header__button-text-responsive">Tham dự</h3>
+              <div>
+                <img
+                  class="form_icon"
+                  src="./imgs/Arrow right alt.png"
+                  alt="Arrow"
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
 
-  <main>
-    <section id="about">
-      <div class="about__content-header">
-        <h2>HÌNH ẢNH</h2>
-        <p class="images__description">
-          Cùng nhìn lại những khoảnh khắc mà các ARONers đã ghi dấu ấn xuyên
-          suốt hành trình 15 năm, với những cột mốc đáng nhớ đánh dấu sự
-          trưởng thành của ARON qua từng ngày.
-        </p>
-      </div>
-      <div class="slide-container mySwiper">
-        <!-- slide one -->
-        <div class="wrab_about--one image__container image__container--display">
-          <ul class="about__content-list">
-            <li class="image_item1">
-              <img class="image__company" onclick="handleZoomImage(event)" src="./imgs/item1.jpg" alt="image_company" />
-              <img class="image__company-two" onclick="handleZoomImage(event)" src="./imgs/item2.jpg"
-                alt="image_company" />
-            </li>
-            <li class="image_item2">
-              <img class="image__company-three" onclick="handleZoomImage(event)" src="./imgs/item3.jpg"
-                alt="image_company" />
-            </li>
-            <li class="image_item3">
-              <img class="image__company image__company-last" onclick="handleZoomImage(event)" src="./imgs/item4.jpg"
-                alt="image_company" />
-              <img class="image__company image__company-last2" onclick="handleZoomImage(event)" src="./imgs/item5.png"
-                alt="image_company" />
-            </li>
-          </ul>
+    <main>
+      <section id="about">
+        <div class="about__content-header">
+          <h2 data-i18n="image"></h2>
+          <p class="images__description" data-i18n="images__description"></p>
         </div>
-        <!-- slide two -->
-        <div class="wrab_about--two image__container">
-          <ul class="about__content-list">
-            <li class="image_item1">
-              <img class="image__company" onclick="handleZoomImage(event)" src="./imgs/ARON_1.jpg"
-                alt="image_company" />
-              <img class="image__company-two" onclick="handleZoomImage(event)" src="./imgs/ARON_2.jpg"
-                alt="image_company" />
-            </li>
-            <li class="image_item2">
-              <img class="image__company-three" onclick="handleZoomImage(event)" src="./imgs/ARON_4.jpg"
-                alt="image_company" />
-            </li>
-            <li class="image_item3">
-              <img class="image__company image__company-last" onclick="handleZoomImage(event)" src="./imgs/ARON_3.jpg"
-                alt="image_company" />
-              <img class="image__company image__company-last2" onclick="handleZoomImage(event)" src="./imgs/ARON_5.jpg"
-                alt="image_company" />
-            </li>
-          </ul>
-        </div>
-        <!-- slide three -->
-        <div class="wrab_about--three image__container">
-          <ul class="about__content-list">
-            <li class="image_item1">
-              <img class="image__company" onclick="handleZoomImage(event)" src="./imgs/ARON_11.jpg"
-                alt="image_company" />
-              <img class="image__company-two" onclick="handleZoomImage(event)" src="./imgs/ARON_7.jpg"
-                alt="image_company" />
-            </li>
-            <li class="image_item2">
-              <img class="image__company-three" onclick="handleZoomImage(event)" src="./imgs/ARON_12.jpg"
-                alt="image_company" />
-            </li>
-            <li class="image_item3">
-              <img class="image__company image__company-last" onclick="handleZoomImage(event)" src="./imgs/ARON_6.jpg"
-                alt="image_company" />
-              <img class="image__company image__company-last2" onclick="handleZoomImage(event)" src="./imgs/ARON_8.jpg"
-                alt="image_company" />
-            </li>
-          </ul>
-        </div>
-        <!-- <div class="swiper-button-next"></div>
+        <div class="slide-container mySwiper">
+          <!-- slide one -->
+          <div
+            class="wrab_about--one image__container image__container--display"
+          >
+            <ul class="about__content-list">
+              <li class="image_item1">
+                <img
+                  class="image__company"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/item1.jpg"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company-two"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/item2.jpg"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item2">
+                <img
+                  class="image__company-three"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/item3.jpg"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item3">
+                <img
+                  class="image__company image__company-last"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/item4.jpg"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company image__company-last2"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/item5.png"
+                  alt="image_company"
+                />
+              </li>
+            </ul>
+          </div>
+          <!-- slide two -->
+          <div class="wrab_about--two image__container">
+            <ul class="about__content-list">
+              <li class="image_item1">
+                <img
+                  class="image__company"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/ARON_1.jpg"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company-two"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/ARON_2.jpg"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item2">
+                <img
+                  class="image__company-three"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/ARON_4.jpg"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item3">
+                <img
+                  class="image__company image__company-last"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/ARON_3.jpg"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company image__company-last2"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/ARON_5.jpg"
+                  alt="image_company"
+                />
+              </li>
+            </ul>
+          </div>
+          <!-- slide three -->
+          <div class="wrab_about--three image__container">
+            <ul class="about__content-list">
+              <li class="image_item1">
+                <img
+                  class="image__company"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/ARON_11.jpg"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company-two"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/ARON_7.jpg"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item2">
+                <img
+                  class="image__company-three"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/ARON_12.jpg"
+                  alt="image_company"
+                />
+              </li>
+              <li class="image_item3">
+                <img
+                  class="image__company image__company-last"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/ARON_6.jpg"
+                  alt="image_company"
+                />
+                <img
+                  class="image__company image__company-last2"
+                  onclick="handleZoomImage(event)"
+                  src="./imgs/ARON_8.jpg"
+                  alt="image_company"
+                />
+              </li>
+            </ul>
+          </div>
+          <!-- <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div> -->
-        <!-- <div class="swiper-pagination"></div> -->
-      </div>
-      <div class="dot__container">
-        <div class="dot-one dot dot--active" onclick="changeSlide(event, 1), clearInterval(imageListLoop)"></div>
-        <div class="dot-two dot" onclick="changeSlide(event, 2), clearInterval(imageListLoop)"></div>
-        <div class="dot-three dot" onclick="changeSlide(event, 3), clearInterval(imageListLoop)"></div>
-      </div>
-    </section>
-    <!-- <section id="contact">
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+        <div class="dot__container">
+          <div
+            class="dot-one dot dot--active"
+            onclick="changeSlide(event, 1), clearInterval(imageListLoop)"
+          ></div>
+          <div
+            class="dot-two dot"
+            onclick="changeSlide(event, 2), clearInterval(imageListLoop)"
+          ></div>
+          <div
+            class="dot-three dot"
+            onclick="changeSlide(event, 3), clearInterval(imageListLoop)"
+          ></div>
+        </div>
+      </section>
+      <!-- <section id="contact">
         <h2>Khách Hàng</h2>
         <p class="customer__description">Cảm ơn bla bla</p>
         <div class="contact__container-content">
@@ -178,90 +273,211 @@
           </ul>
         </div>
       </section> -->
-    <section id="contact" class="splide customer-block" aria-labelledby="carousel-heading">
-      <h2>KHÁCH HÀNG</h2>
-      <p class="customer__description">
-        Để có được cột mốc 15 năm như ngày hôm nay, ARON may mắn có được sự
-        tin tưởng và đồng hành từ quý Khách hàng - Doanh nghiệp
-      </p>
-      <div class="splide__track customer-slide__block">
-        <ul class="splide__list customer-slide-container customer_content">
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/BGRIM.png" />
-            </div>
-          </li>
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/TTC.png" />
-            </div>
-          </li>
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/HM.png" />
-            </div>
-          </li>
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/GHN.png" />
-            </div>
-          </li>
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/MASAN.png" />
-            </div>
-          </li>
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/TTCI.png" />
-            </div>
-          </li>
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/TRUNGSON.png" />
-            </div>
-          </li>
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/AULAC.png" />
-            </div>
-          </li>
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/TTC Sugarpng.png" />
-            </div>
-          </li>
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/DILIGO.png" />
-            </div>
-          </li>
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/SGP.png" />
-            </div>
-          </li>
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/KIM.png" />
-            </div>
-          </li>
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/THIENNAM.png" />
-            </div>
-          </li>
-          <li class="splide__slide image_customer--item">
-            <div class="image-block">
-              <img class="customer_image" src="./imgs/TCH.png" />
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
+      <section
+        id="contact"
+        class="splide customer-block"
+        aria-labelledby="carousel-heading"
+      >
+        <h2 data-i18n="customers"></h2>
+        <p class="customer__description" data-i18n="customer__description"></p>
+        <div class="splide__track customer-slide__block">
+          <ul class="splide__list customer-slide-container customer_content">
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/BGRIM.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TTC.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/HM.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/GHN.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/MASAN.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TTCI.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TRUNGSON.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/AULAC.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TTC Sugarpng.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/DILIGO.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/SGP.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/KIM.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/THIENNAM.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TCH.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/SIAM.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TAKY.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/PEPSICO.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/LUCKY GROUP.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/VTH.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/GE.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TTCH.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/SEEDCOM.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/LASUCO.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/OEIC.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/HOANGPHUC.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/SPPSA.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/CAUDAT.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/FICO.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/ESILICON.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/JUNO.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/CRK.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/GHTK.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/HNOSS.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/CPS.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/DONGTAM.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/MICROSTAR.png" />
+              </div>
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/ABA.png" />
+              </div>
+            </li>
+            <!-- <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TCH.png" />
+              </div>
+            </li> -->
+          </ul>
+        </div>
+      </section>
+    </main>
 
-  <!-- <footer class="footer__container">
+    <!-- <footer class="footer__container">
     <div>
       <img src="../imgs/imagebtm.svg" alt="Company Logo" />
     </div>
@@ -272,65 +488,104 @@
     </div>
   </footer> -->
 
-  <div id="popup" class="popup hidden">
-    <div class="popup-content">
-      <span class="close" id="cancelButton">&times;</span>
-      <!-- <h2>Heading 2</h2>
+    <div id="popup" class="popup hidden">
+      <div class="popup-content">
+        <span class="close" id="cancelButton">&times;</span>
+        <!-- <h2>Heading 2</h2>
         <p class="customer__description-popup">
           An anniversary is the date on which an event took place or
           an institution was founded in a previous year, and may also refer to
           the commemoration or
         </p> -->
-      <div id="formContainer" class="hidden">
-        <form id="customerForm" class="submit__form">
-          <label style="font-family: Montserrat, sans-serif" for="name">Anh/Chị *</label>
-          <input class="input__form" type="text" id="name" placeholder="Vui lòng nhập Họ tên" required />
-          <div class="submit__button">
-            <button class="confirm__button" type="button" id="confirmButton">
-              Xác nhận
-            </button>
-          </div>
-        </form>
+        <div id="formContainer" class="hidden">
+          <form id="customerForm" class="submit__form">
+            <label
+              style="font-family: Montserrat, sans-serif"
+              for="name"
+              data-i18n="popup_label"
+            ></label>
+            <input
+              class="input__form"
+              type="text"
+              id="name"
+              placeholder="Please enter your full name."
+              required
+            />
+            <div class="submit__button">
+              <button
+                data-i18n="button_confirm"
+                class="confirm__button"
+                type="button"
+                id="confirmButton"
+              ></button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="popup__container hidden-popup" onclick="closePopupSuccess()">
-    <div class="popup-success">
-      <div class="popup-success__content" onclick="event.stopImmediatePropagation()">
-        <div style="width: 100%; display: flex; justify-content: end">
-          <button class="close-popup-btn" onclick="closePopupSuccess()">
+    <div class="popup__container hidden-popup" onclick="closePopupSuccess()">
+      <div class="popup-success">
+        <div
+          class="popup-success__content"
+          onclick="event.stopImmediatePropagation()"
+        >
+          <div style="width: 100%; display: flex; justify-content: end">
+            <button class="close-popup-btn" onclick="closePopupSuccess()">
+              <img src="./imgs/X.svg" alt="icon" />
+            </button>
+          </div>
+          <h1
+            class="title_pop-up_success"
+            style="color: #f4811f; font-size: 42px; margin: 15px 0"
+          >
+            Thank you & See you !
+          </h1>
+          <p
+            data-i18n="description_pop_up_success"
+            style="
+              color: #ffffff;
+              font-size: 18px;
+              font-weight: 400;
+              text-align: center;
+              width: 100%;
+            "
+          ></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- open image -->
+    <div
+      class="popup__image__container hidden-popup"
+      onclick="closeImagePopup()"
+    >
+      <div style="padding: 20px; height: 100%">
+        <div
+          style="
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            height: fit-content;
+          "
+        >
+          <button class="close-popup-btn" onclick="closeImagePopup()">
             <img src="./imgs/X.svg" alt="icon" />
           </button>
         </div>
-        <h1 class="title_pop-up_success" style="color: #f4811f; font-size: 42px; margin: 15px 0">
-          Thank you & See you !
-        </h1>
-        <p style="color: #ffffff; font-size: 18px; font-weight: 400">
-          Cảm ơn Anh/ Chị đã dành thời gian tham dự sự kiện quan trọng này của
-          ARON. ARON mong chờ được đón tiếp anh chị.
-        </p>
+        <div class="popup__image--block">
+          <img
+            src=""
+            alt=""
+            class="popup__image"
+            onclick="event.stopImmediatePropagation()"
+          />
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- open image -->
-  <div class="popup__image__container hidden-popup" onclick="closeImagePopup()">
-    <div style="padding: 20px; height: 100%;">
-      <div style="width: 100%; display: flex; justify-content: end; height: fit-content;">
-        <button class="close-popup-btn" onclick="closeImagePopup()">
-          <img src="./imgs/X.svg" alt="icon" />
-        </button>
-      </div>
-      <div class="popup__image--block">
-        <img src="" alt="" class="popup__image" onclick="event.stopImmediatePropagation()">
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-  <script src="./src/js/script.js"></script>
-</body>
-
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="./src/js/script.js"></script>
+  </body>
 </html>

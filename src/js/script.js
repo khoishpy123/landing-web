@@ -217,72 +217,108 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // open images
-const popupImageContainer = document.querySelector(".popup__image__container")
-const popupImage = document.querySelector(".popup__image")
+const popupImageContainer = document.querySelector(".popup__image__container");
+const popupImage = document.querySelector(".popup__image");
 
 const handleZoomImage = (event) => {
-  event.target.getAttribute("src")
-  popupImageContainer.classList.remove("hidden-popup")
-  popupImage.setAttribute("src", event.target.getAttribute("src"))
-}
+  event.target.getAttribute("src");
+  popupImageContainer.classList.remove("hidden-popup");
+  popupImage.setAttribute("src", event.target.getAttribute("src"));
+};
 
 const closeImagePopup = () => {
-  popupImageContainer.classList.add("hidden-popup")
-}
+  popupImageContainer.classList.add("hidden-popup");
+};
 
 // Menu language
-const menuLanguage = document.querySelector(".menu__language")
-const languageBtn = document.querySelector(".language")
+const menuLanguage = document.querySelector(".menu__language");
+const languageBtn = document.querySelector(".language");
 
 const openMenuLanguage = () => {
   menuLanguage.classList.add("show")
-  console.log('open');
 }
 
 document.addEventListener('click', (event) => {
   if (!menuLanguage.contains(event.target) && !languageBtn.contains(event.target)) {
     menuLanguage.classList.remove("show")
-    console.log('close');
   }
 });
 
+document.addEventListener("click", (event) => {
+  if (
+    !menuLanguage.contains(event.target) &&
+    !languageBtn.contains(event.target)
+  ) {
+    menuLanguage.classList.remove("show");
+  }
+});
 
 //i18n
 const resources = {
   vi: {
     translation: {
-      "day": "ngàysss",
-      "receiveAndFeel": "Nhận & Cảm",
-      "acceptJoin": "Xác nhận thạm dự",
-    }
+      menu__language: "Vietnamese",
+      day: "ngày",
+      hours: "giờ",
+      minutes: "phút",
+      seconds: "giây",
+      receiveAndFeel: "Nhận & Cảm",
+      acceptJoin: "XÁC NHẬN THAM DỰ",
+      image: "HÌNH ẢNH",
+      images__description:
+        "Cùng nhìn lại những khoảnh khắc mà các ARONers đã ghi dấu ấn xuyên suốt hành trình 15 năm,với những cột mốc đáng nhớ đánh dấu sự trưởng thành của ARON qua từng ngày.",
+      customers: "KHÁCH HÀNG",
+      customer__description:
+        "Để có được cột mốc 15 năm như ngày hôm nay, ARON may mắn có được sự tin tưởng và đồng hành từ quý Khách hàng - Doanh nghiệp",
+      popup_label: "Anh/Chị *",
+      button_confirm: "Xác nhận",
+      placeholder: "vui lòng điền tên",
+      description_pop_up_success:
+        "Cảm ơn Anh/ Chị đã dành thời gian tham dự sự kiện quan trọng này của ARON. ARON mong chờ được đón tiếp anh chị.",
+    },
   },
   en: {
     translation: {
-      "day": "days",
-      "receiveAndFeel": "Receive and Feel",
-      "acceptJoin": "Confirm participation",
-    }
-  }
+      menu__language: "EngLish",
+      day: "days",
+      hours: "hours",
+      minutes: "minutes",
+      seconds: "seconds",
+      receiveAndFeel: "Receive and Feel",
+      acceptJoin: "CLICK TO JOIN",
+      image: "OUR JOURNEY",
+      images__description:
+        "Let's revisit the cherished moments that ARONers have etched into our 15-year journey, marking significant milestones in ARON's growth each and every day",
+      customers: "OUR CLIENTS",
+      customer__description:
+        "Reaching this 15-year milestone would not have been possible without the unwavering trust and partnership of our valued customers and businesses. We are deeply grateful for your continued support.",
+      popup_label: "Full Name *",
+      button_confirm: "Confirm",
+      placeholder: "Full Name",
+      description_pop_up_success:
+        "We sincerely appreciate you taking the time to attend our important event. We eagerly await the pleasure of welcoming you.",
+    },
+  },
 };
 
-i18next
-  .use(i18nextBrowserLanguageDetector)
-  .init({
+i18next.use(i18nextBrowserLanguageDetector).init(
+  {
     resources,
-    fallbackLng: 'vi',
-    debug: true
-  }, function (err, t) {
+    fallbackLng: "vi",
+    debug: true,
+  },
+  function (err, t) {
     // init set content
     updateContent();
-  });
+  }
+);
 
 function updateContent() {
-  document.querySelectorAll('[data-i18n]').forEach(element => {
-    const key = element.getAttribute('data-i18n');
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
     element.textContent = i18next.t(key);
   });
 }
-
 
 const changeLanguage = (selectedLanguage) => {
   i18next.changeLanguage(selectedLanguage, updateContent);
