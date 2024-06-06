@@ -62,6 +62,7 @@ body {
 .unit {
   font-size: 18px;
   opacity: 0.6;
+  font-weight: 100;
 }
 .menu__language ul li {
   padding: 10px 20px;
@@ -369,7 +370,7 @@ li {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 50%;
+  width: 40%;
   border-radius: 18px;
 }
 
@@ -387,7 +388,7 @@ li {
 }
 
 .customer_image:hover {
-  cursor: pointer;
+  cursor: grabbing;
 }
 
 .close:hover,
@@ -529,7 +530,7 @@ label {
   border: none;
   text-align: center;
   text-decoration: none;
-  display: flex;
+  display: none;
   align-items: center;
 }
 
@@ -551,6 +552,9 @@ label {
 
 .customer-slide__block {
   width: 90%;
+}
+.customer-slide__block:hover {
+  cursor: grab;
 }
 
 .customer-slide-container {
@@ -628,6 +632,9 @@ label {
   /* span {
     font-size: 10px;
   } */
+  .form_icon {
+    margin-right: -20px;
+  }
   .unit {
     font-size: 12px;
   }
@@ -642,6 +649,9 @@ label {
     justify-content: center;
     align-items: center;
     font-size: 30px;
+  }
+  .company_image_mobile {
+    width: 80px;
   }
 
   .banner__content--des,
@@ -669,8 +679,8 @@ label {
   }
 
   .header__button {
-    justify-content: start;
-    width: fit-content;
+    /* justify-content: start;
+    width: fit-content; */
     gap: 10px;
   }
 
@@ -686,6 +696,7 @@ label {
   .popup-content {
     margin: 50% auto;
     border-radius: 18px;
+    width: 60%;
   }
 
   .customer__description {
@@ -704,8 +715,12 @@ label {
   /* .customer_content {
     flex-direction: column;
   } */
+  .header__content {
+    height: 50px;
+  }
   .header__content-body {
-    background-image: url(../../imgs/banner-mobile.jpg);
+    background-image: url(../../imgs/mobile_banner_new.png);
+    margin-top: 50px;
   }
 
   .popup-success {
