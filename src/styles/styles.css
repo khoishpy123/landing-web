@@ -42,6 +42,7 @@ body {
   color: #000000;
   position: absolute;
   top: 40px;
+  right: 0;
   font-size: 18px;
   font-weight: 400;
   border-radius: 9px;
@@ -366,7 +367,7 @@ li {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 50%;
+  width: 40%;
   border-radius: 18px;
 }
 
@@ -526,7 +527,7 @@ label {
   border: none;
   text-align: center;
   text-decoration: none;
-  display: flex;
+  display: none;
   align-items: center;
 }
 
@@ -640,6 +641,9 @@ label {
     align-items: center;
     font-size: 30px;
   }
+  .company_image_mobile {
+    width: 80px;
+  }
 
   .banner__content--des,
   .banner__content--title {
@@ -683,6 +687,7 @@ label {
   .popup-content {
     margin: 50% auto;
     border-radius: 18px;
+    width: 60%;
   }
 
   .customer__description {
@@ -701,8 +706,12 @@ label {
   /* .customer_content {
     flex-direction: column;
   } */
+  .header__content {
+    height: 50px;
+  }
   .header__content-body {
-    background-image: url(../../imgs/banner-mobile.jpg);
+    background-image: url(../../imgs/mobile_banner_new.png);
+    margin-top: 50px;
   }
 
   .popup-success {

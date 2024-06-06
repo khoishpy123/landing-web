@@ -34,16 +34,20 @@
       <div class="header__content">
         <div class="header__block">
           <a href="#" class="header__container-logo">
-            <img src="./imgs/Logo.svg" alt="Company Logo" />
+            <img
+              class="company_image_mobile"
+              src="./imgs/Logo.svg"
+              alt="Company Logo"
+            />
             <span class="header__title">15th Anniversary</span>
           </a>
           <div class="language" onclick="openMenuLanguage()">
-            Vietnamese
+            <span data-i18n="menu__language"></span>
             <img src="./imgs/arrow-down-icon.svg" alt="icon" />
             <div class="menu__language">
               <ul>
                 <li onclick="changeLanguage('vi')">Vietnamese</li>
-                <li onclick="changeLanguage('en')">English</li>
+                <li onclick="changeLanguage('en')">EngLish</li>
               </ul>
             </div>
           </div>
@@ -140,7 +144,7 @@
                 <img
                   class="image__company image__company-last2"
                   onclick="handleZoomImage(event)"
-                  src="./imgs/item5.png"
+                  src="./imgs/image_5.jpg"
                   alt="image_company"
                 />
               </li>
@@ -467,11 +471,16 @@
                 <img class="customer_image" src="./imgs/ABA.png" />
               </div>
             </li>
-            <!-- <li class="splide__slide image_customer--item">
+            <li class="splide__slide image_customer--item">
               <div class="image-block">
-                <img class="customer_image" src="./imgs/TCH.png" />
+                <img class="customer_image" src="./imgs/BAOMINH.png" />
               </div>
-            </li> -->
+            </li>
+            <li class="splide__slide image_customer--item">
+              <div class="image-block">
+                <img class="customer_image" src="./imgs/TTCGroub.png" />
+              </div>
+            </li>
           </ul>
         </div>
       </section>

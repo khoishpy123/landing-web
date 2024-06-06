@@ -233,11 +233,17 @@ const closeImagePopup = () => {
 // Menu language
 const menuLanguage = document.querySelector(".menu__language");
 const languageBtn = document.querySelector(".language");
+let isOpenLanguageMenu = false;
 
 const openMenuLanguage = () => {
-  menuLanguage.classList.add("show");
+  if (isOpenLanguageMenu) {
+    menuLanguage.classList.remove("show");
+    isOpenLanguageMenu = false;
+  } else {
+    menuLanguage.classList.add("show");
+    isOpenLanguageMenu = true;
+  }
 };
-
 document.addEventListener("click", (event) => {
   if (
     !menuLanguage.contains(event.target) &&
@@ -263,7 +269,7 @@ const resources = {
         "Cùng nhìn lại những khoảnh khắc mà các ARONers đã ghi dấu ấn xuyên suốt hành trình 15 năm,với những cột mốc đáng nhớ đánh dấu sự trưởng thành của ARON qua từng ngày.",
       customers: "KHÁCH HÀNG",
       customer__description:
-        "Để có được cột mốc 15 năm như ngày hôm nay, ARON may mắn có được sự tin tưởng và đồng hành từ quý Khách hàng - Doanh nghiệp",
+        "Để có được cột mốc 15 năm như ngày hôm nay, ARON may mắn có được sự tin tưởng và đồng hành từ quý Khách hàng - Doanh nghiệp.",
       popup_label: "Anh/Chị *",
       button_confirm: "Xác nhận",
       placeholder: "vui lòng điền tên",
@@ -320,6 +326,6 @@ const changeLanguage = (selectedLanguage) => {
   console.log(menuLanguage.classList);
 };
 
-// languageSelect.value = i18next.language || 'en';
+// languageSelect.value = i18next.language || "en";
 
 updateContent();
