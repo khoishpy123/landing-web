@@ -676,8 +676,8 @@ label {
   }
 
   .header__button {
-    justify-content: start;
-    width: fit-content;
+    /* justify-content: start;
+    width: fit-content; */
     gap: 10px;
   }
 
