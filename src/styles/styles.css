@@ -49,8 +49,7 @@ body {
   display: none;
 }
 
-.button_hiden {
-}
+.button_hiden {}
 
 .menu__language ul {
   list-style-type: none;
@@ -59,11 +58,13 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .unit {
   font-size: 18px;
   opacity: 0.6;
   font-weight: 100;
 }
+
 .menu__language ul li {
   padding: 10px 20px;
   cursor: pointer;
@@ -165,24 +166,27 @@ body {
   font-size: 22px;
   width: 315px;
   height: 60px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: #ffffff5c;
   color: #fff;
   box-shadow: 3px 3px 3px #6b636387;
+  position: relative;
 }
 
 .header__button:hover {
   cursor: pointer;
   background-color: #7e410b;
-  border: 3px solid #7e410b;
+}
+
+.form_icon--block {
+  height: 100%;
+  position: absolute;
+  right: 0;
 }
 
 .form_icon {
-  padding-top: 5px;
-  height: 58px;
-  /* width: 40px; */
-  margin-right: -7px;
+  height: 100%;
 }
 
 #about {
@@ -438,8 +442,7 @@ label {
   opacity: 0.4;
 }
 
-.customer__description-popup {
-}
+.customer__description-popup {}
 
 .footer__container {
   display: flex;
@@ -454,13 +457,12 @@ label {
 }
 
 .header__button-text {
-  padding-left: 35px;
+  padding-right: 25px;
   font-size: 18px;
   font-weight: 600;
 }
 
-.slide-container {
-}
+.slide-container {}
 
 .dot__container {
   margin-top: 30px;
@@ -553,6 +555,7 @@ label {
 .customer-slide__block {
   width: 90%;
 }
+
 .customer-slide__block:hover {
   cursor: grab;
 }
@@ -635,6 +638,7 @@ label {
   .form_icon {
     margin-right: -20px;
   }
+
   .unit {
     font-size: 12px;
   }
@@ -650,6 +654,7 @@ label {
     align-items: center;
     font-size: 30px;
   }
+
   .company_image_mobile {
     width: 80px;
   }
@@ -718,6 +723,7 @@ label {
   .header__content {
     height: 50px;
   }
+
   .header__content-body {
     background-image: url(../../imgs/mobile_banner_new.png);
     margin-top: 50px;
