@@ -760,3 +760,16 @@ label {
     height: auto;
   }
 }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Safari and Chrome */
+  /* .flex-direction-nav-featured a{
+      margin-top: 4%;
+  }  */
+
+  /* Safari only override */
+  ::i-block-chrome,
+  .popup__image {
+    width: 100%;
+    height: auto;
+  }
+}
