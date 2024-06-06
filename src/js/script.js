@@ -209,8 +209,8 @@ document.addEventListener("DOMContentLoaded", function () {
     perMove: 1,
     rewind: true,
     autoplay: true,
-    interval: 3000,
-    pauseOnHover: false,
+    interval: 2000,
+    pauseOnHover: true,
     resetProgress: false,
     pagination: false,
   }).mount();
@@ -268,7 +268,7 @@ document.addEventListener("click", (event) => {
 const resources = {
   vi: {
     translation: {
-      menu__language: "Vietnamese",
+      menu__language: "VN",
       day: "ngày",
       hours: "giờ",
       minutes: "phút",
@@ -277,7 +277,7 @@ const resources = {
       acceptJoin: "XÁC NHẬN THAM DỰ",
       image: "HÌNH ẢNH",
       images__description:
-        "Cùng nhìn lại những khoảnh khắc mà các ARONers đã ghi dấu ấn xuyên suốt hành trình 15 năm,với những cột mốc đáng nhớ đánh dấu sự trưởng thành của ARON qua từng ngày.",
+        "Cùng nhìn lại những khoảnh khắc mà các ARONers đã ghi dấu ấn xuyên suốt hành trình 15 năm, với những cột mốc đáng nhớ đánh dấu sự trưởng thành của ARON qua từng ngày.",
       customers: "KHÁCH HÀNG",
       customer__description:
         "Để có được cột mốc 15 năm như ngày hôm nay, ARON may mắn có được sự tin tưởng và đồng hành từ quý Khách hàng - Doanh nghiệp.",
@@ -290,7 +290,7 @@ const resources = {
   },
   en: {
     translation: {
-      menu__language: "EngLish",
+      menu__language: "EN",
       day: "days",
       hours: "hours",
       minutes: "minutes",

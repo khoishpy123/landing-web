@@ -62,6 +62,7 @@ body {
 .unit {
   font-size: 18px;
   opacity: 0.6;
+  font-weight: 100;
 }
 .menu__language ul li {
   padding: 10px 20px;
@@ -387,7 +388,7 @@ li {
 }
 
 .customer_image:hover {
-  cursor: pointer;
+  cursor: grabbing;
 }
 
 .close:hover,
@@ -551,6 +552,9 @@ label {
 
 .customer-slide__block {
   width: 90%;
+}
+.customer-slide__block:hover {
+  cursor: grab;
 }
 
 .customer-slide-container {
