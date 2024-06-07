@@ -56,7 +56,7 @@
 // startCountdown(18, 2, 27, 20);
 //
 document.addEventListener("DOMContentLoaded", function () {
-  emailjs.init("fqCu0rU0f8PdraPgd");
+  emailjs.init("KcJEP6yQ3aFqdfRTR");
 
   const popup = document.getElementById("popup");
   const btn = document.querySelector(".header__button");
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         message: `Họ Tên Khách Hàng: ${name}`,
       };
 
-      emailjs.send("service_oeyzchk", "template_z4k5i58", templateParams).then(
+      emailjs.send("service_pv126dr", "template_z4k5i58", templateParams).then(
         function (response) {
           // Swal.fire({
           //   icon: "success",
