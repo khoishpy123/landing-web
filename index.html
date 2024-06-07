@@ -504,25 +504,31 @@
           an institution was founded in a previous year, and may also refer to
           the commemoration or
         </p> -->
-        <div id="formContainer" class="hidden">
-          <form id="customerForm" class="submit__form">
+        <div id="formContainer">
+          <form
+            id="customerForm"
+            class="submit__form"
+            name="submit-to-google-sheet"
+          >
             <label
               style="font-family: Montserrat, sans-serif"
               for="name"
               data-i18n="popup_label"
             ></label>
+            <!-- <input type="text" name="date" style="display: none" /> -->
             <input
               class="input__form"
               type="text"
               id="name"
+              name="name"
               placeholder="Please enter your full name."
               required
             />
-            <div class="submit__button">
+            <div class="container__button">
               <button
                 data-i18n="button_confirm"
                 class="confirm__button"
-                type="button"
+                type="submit"
                 id="confirmButton"
               ></button>
             </div>

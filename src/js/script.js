@@ -55,13 +55,15 @@
 // // Start the countdown with initial values: 30 days, 720 hours, 430 minutes
 // startCountdown(18, 2, 27, 20);
 //
+const popup = document.getElementById("popup");
+const btn = document.querySelector(".header__button");
+const span = document.getElementsByClassName("close")[0];
+const confirmButton = document.getElementById("confirmButton");
+const containerButton = document.querySelector(".container__button");
+
 document.addEventListener("DOMContentLoaded", function () {
   emailjs.init("KcJEP6yQ3aFqdfRTR");
 
-  const popup = document.getElementById("popup");
-  const btn = document.querySelector(".header__button");
-  const span = document.getElementsByClassName("close")[0];
-  const confirmButton = document.getElementById("confirmButton");
   btn.onclick = function () {
     popup.style.display = "block";
   };
@@ -75,44 +77,85 @@ document.addEventListener("DOMContentLoaded", function () {
       popup.style.display = "none";
     }
   };
-  //mail
-  confirmButton.addEventListener("click", function () {
-    const name = document.getElementById("name").value;
-    if (name) {
-      const templateParams = {
-        to_email: "ARON@gmail.com",
-        from_name: "ARON 15th Anniversary",
-        message: `Họ Tên Khách Hàng: ${name}`,
-      };
+  // mail;
+  // confirmButton.addEventListener("click", function () {
+  //   const name = document.getElementById("name").value;
+  //   if (name) {
+  //     const templateParams = {
+  //       to_email: "ARON@gmail.com",
+  //       from_name: "ARON 15th Anniversary",
+  //       message: `Họ Tên Khách Hàng: ${name}`,
+  //     };
 
-      emailjs.send("service_pv126dr", "template_z4k5i58", templateParams).then(
-        function (response) {
-          // Swal.fire({
-          //   icon: "success",
-          //   title: "Thank you see you soon",
-          //   text: "No one likes big deltas between forecasts and actuals. Most models though are too limited, relying on sample datasets or just gut feel. Oracle Cloud ERP introduces machine-learning to",
-          // });
-          popupSuccessEl.classList.remove("hidden-popup");
-          customerForm.reset();
-          formContainer.classList.add("hidden");
-        },
-        function (error) {
-          Swal.fire({
-            icon: "error",
-            title: "Lỗi",
-            text: "Gửi email thất bại...",
-          });
-        }
-      );
-    } else {
-      Swal.fire({
-        icon: "warning",
-        title: "Cảnh báo",
-        text: "Vui lòng điền họ tên.",
-      });
-    }
-  });
-  customerForm.reset();
+  //     emailjs.send("service_pv126dr", "template_z4k5i58", templateParams).then(
+  //       function (response) {
+  //         // Swal.fire({
+  //         //   icon: "success",
+  //         //   title: "Thank you see you soon",
+  //         //   text: "No one likes big deltas between forecasts and actuals. Most models though are too limited, relying on sample datasets or just gut feel. Oracle Cloud ERP introduces machine-learning to",
+  //         // });
+  //         popupSuccessEl.classList.remove("hidden-popup");
+  //         customerForm.reset();
+  //         formContainer.classList.add("hidden");
+  //       },
+  //       function (error) {
+  //         Swal.fire({
+  //           icon: "error",
+  //           title: "Lỗi",
+  //           text: "Gửi email thất bại...",
+  //         });
+  //       }
+  //     );
+  //   } else {
+  //     Swal.fire({
+  //       icon: "warning",
+  //       title: "Cảnh báo",
+  //       text: "Vui lòng điền họ tên.",
+  //     });
+  //   }
+  // });
+  // customerForm.reset();
+});
+
+// send data to sheet
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbzEGGAvn4wO7iWVLSlO9P6DfpGvQVWR0pSjvCFeVS_IuThimB1E8XXD0LRbmpvoYbznZA/exec";
+
+const form = document.forms["submit-to-google-sheet"];
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // Disable the confirm button and change its text
+  confirmButton.disabled = true;
+  confirmButton.textContent = "Loading...";
+
+  const currentDate = new Date();
+
+  const formattedDate = `${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()} ${currentDate.getDate()}/${
+    currentDate.getMonth() + 1
+  }/${currentDate.getFullYear()}`;
+
+  const formData = new FormData(form);
+  formData.append("Date", formattedDate);
+
+  fetch(scriptURL, { method: "POST", body: formData })
+    .then((response) => {
+      // Re-enable the confirm button and change its text back to "Confirm"
+      confirmButton.disabled = false;
+      confirmButton.textContent = "Confirm";
+
+      popupSuccessEl.classList.remove("hidden-popup");
+      customerForm.reset();
+      popup.style.display = "none";
+    })
+    .catch((error) => {
+      // Re-enable the confirm button and change its text back to "Confirm"
+      confirmButton.disabled = false;
+      confirmButton.textContent = "Confirm";
+
+      console.error("Error!", error.message);
+    });
 });
 
 // Slider
