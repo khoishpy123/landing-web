@@ -535,8 +535,11 @@ label {
   border: none;
   text-align: center;
   text-decoration: none;
-  display: none;
+  /* display: none; */
   align-items: center;
+}
+.close-popup-btn:hover {
+  cursor: pointer;
 }
 
 .hidden-popup {
