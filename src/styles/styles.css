@@ -182,7 +182,7 @@ body {
 .form_icon--block {
   height: 100%;
   position: absolute;
-  right: 0;
+  right: 1px;
 }
 
 .form_icon {
@@ -747,5 +747,11 @@ label {
 @media only screen and (max-width: 400px) {
   .header__title {
     display: none;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .header__content-body {
+    height: 700px;
   }
 }
