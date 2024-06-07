@@ -783,4 +783,7 @@ label {
   .header__content-body {
     height: 700px;
   }
+  .header__button-text {
+    font-size: 14px;
+  }
 }
