@@ -384,6 +384,9 @@ li {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  position: relative;
+  top: -17px;
+  right: -3px;
 }
 
 .customer_image {
