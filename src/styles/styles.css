@@ -165,7 +165,7 @@ body {
   border: 0px solid #ffffff5c;
   display: flex;
   font-size: 22px;
-  width: 315px;
+  width: 325px;
   height: 60px;
   justify-content: center;
   align-items: center;
@@ -520,7 +520,7 @@ label {
 }
 
 .popup-success {
-  width: 40%;
+  width: 50%;
   background-color: #3a3632;
 }
 
