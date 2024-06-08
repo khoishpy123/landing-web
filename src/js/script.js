@@ -62,7 +62,7 @@ const confirmButton = document.getElementById("confirmButton");
 const containerButton = document.querySelector(".container__button");
 
 document.addEventListener("DOMContentLoaded", function () {
-  emailjs.init("KcJEP6yQ3aFqdfRTR");
+  emailjs.init("fqCu0rU0f8PdraPgd");
 
   btn.onclick = function () {
     popup.style.display = "block";
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //       message: `Họ Tên Khách Hàng: ${name}`,
   //     };
 
-  //     emailjs.send("service_pv126dr", "template_z4k5i58", templateParams).then(
+  //     emailjs.send("service_oeyzchk", "template_z4k5i58", templateParams).then(
   //       function (response) {
   //         // Swal.fire({
   //         //   icon: "success",
